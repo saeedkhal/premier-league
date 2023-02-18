@@ -6,7 +6,7 @@ exports.handler = async () => {
     const html = await request.get('https://www.premierleague.com/tables');
       const $ = cheerio.load(html);
     let tables = [];
-  $('table').eq(0).find('tbody').find('tr').each((index, element) => {
+  $('table').eq(0).find('tbody tr').not('.expandable').each((index, element) => {
      const position =  $(element).find('.pos .value').text().trim();
      const team_link =  $(element).find('.team a').attr('href');
      const teamAbb = $(element).find('.team .short').text().trim();
@@ -32,6 +32,9 @@ exports.handler = async () => {
     });
 	return {
 		statusCode: 200,
-		body: JSON.stringify({res:tables})
+		body: JSON.stringify({res:tables}),
+    headers: {
+      "Content-Type": "application/json"
+    },
 	}
 }
