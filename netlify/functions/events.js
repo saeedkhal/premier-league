@@ -1,15 +1,14 @@
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
-const request = require('request-promise')
 const fs = require('fs');
 exports.handler = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://www.premierleague.com/home');
-
   await page.waitForFunction('window.performance.timing.domContentLoadedEventEnd > 0');
   const html = await page.content();
   fs.writeFileSync('test.html', html);
+
   // const html = fs.readFileSync('test.html');
 
 	const $ = cheerio.load(html);
@@ -30,11 +29,10 @@ exports.handler = async () => {
 
     return match
   }
-
   const htmlMatches = $('.matchListContainer .matchAbridged').filter('[href]');
   if (htmlMatches.length > 1) {
     // get matches with classes matchAbridged and have href regardelss href value
-    $('.matchListContainer .matchAbridged').filter('[href]').each((index, element) => {
+    htmlMatches.each((index, element) => {
       const match = getData(element);
       matches.push(match);
     });
@@ -42,10 +40,15 @@ exports.handler = async () => {
     const match = getData(htmlMatches);
     matches.push(match);
   }
-
+  const matchWeek =  $('.fixturesAbridgedHeader header .week').text().trim();
 	return {
 		statusCode: 200,
-		body: JSON.stringify({res:matches}),
+		body: JSON.stringify({
+      res:{
+        matchWeek,
+        matches
+      }
+    }),
     headers: {
       "Content-Type": "application/json"
     }

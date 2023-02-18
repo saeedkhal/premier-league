@@ -13,6 +13,8 @@ exports.handler = async () => {
   $('table').eq(0).find('tbody tr').not('.expandable').each((index, tr) => {
     // table col
      const position =  $(tr).find('.pos .value').text().trim();
+     const movment =  $(tr).find('.pos .movement').attr('class').split(' ').at(-1);
+     console.log(movment)
      const teamLink =  $(tr).find('.team a').attr('href');
      const teamAbb = $(tr).find('.team .short').text().trim();
      const teamName = $(tr).find('.team .long').text().trim();
@@ -25,7 +27,7 @@ exports.handler = async () => {
     //  fomAbb
      const formAbb = $(tr).find('td.form li').map((index2,form) =>{
         const matchDteails = {};
-        matchDteails.form_abbreviation = $(form).find('.form-abbreviation').text().trim();
+        matchDteails.formAbbreviation = $(form).find('.form-abbreviation').text().trim();
         matchDteails.matchLink =  $(form).find('.tooltip-link').attr('href');
         matchDteails.matchInfo =  $(form).find('.tooltip-content .matchInfo').text().trim();
         matchDteails.homeTeam = $(form).find('.tooltip-content .teamName').first().text().trim();
@@ -48,7 +50,7 @@ exports.handler = async () => {
     nextMatch.homeTeam=  $(tr).find('td.nextMatchCol .tooltip-content .teamName abbr').first().attr('title');
     nextMatch.awayTeam =  $(tr).find('td.nextMatchCol .tooltip-content .teamName abbr').last().attr('title');
     
-     tables.push({position, teamLink, teamAbb, teamName, played, won, drawn, lost, points, formAbb, nextMatch});
+     tables.push({position,movment, teamLink, teamAbb, teamName, played, won, drawn, lost, points, formAbb, nextMatch});
 
     });
 	return {
