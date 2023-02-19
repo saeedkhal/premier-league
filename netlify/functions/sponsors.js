@@ -11,14 +11,14 @@ exports.handler = async () => {
 
     const $ = cheerio.load(html);
 
-    let sopnsors = [];
-    $('.footer-sponsors ul.footer-sponsors__sponsors-list li').each((index, li) => {
+    const sopnsors = $('.footer-sponsors ul.footer-sponsors__sponsors-list li').map((index, li) => {
 
-      const sponsorText = $(li).find('.footer-sponsors__sponsor-text').text().trim();
-      const sponsorImg = $(li).find('img').attr('src');
-      sopnsors.push({ sponsorText, sponsorImg });
+      return {
+        sponsorText: $(li).find('.footer-sponsors__sponsor-text').text().trim(),
+        sponsorImg: $(li).find('img').attr('src')
+      };
 
-    });
+    }).get();
     return {
       statusCode: 200,
       body: JSON.stringify({ res: sopnsors }),

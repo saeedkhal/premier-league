@@ -103,10 +103,10 @@ exports.handler = async () => {
             statusCode: 200,
             body: JSON.stringify({
                 res: {
-                    // mainNews,
-                    // secoundryNews,
-                    // latestVideosmain,
-                    // latestVideosSecoundary
+                    mainNews,
+                    secoundryNews,
+                    latestVideosmain,
+                    latestVideosSecoundary,
                     latestNews
 
                 }
