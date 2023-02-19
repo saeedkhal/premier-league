@@ -4,12 +4,10 @@ const fs = require('fs');
 exports.handler = async () => {
     try {
 
+        const html = await request.get('https://www.premierleague.com/home');
+        fs.writeFileSync('test.html', html)
 
-
-        // const html = await request.get('https://www.premierleague.com/home');
-        // fs.writeFileSync('test.html', html)
-
-        const html = fs.readFileSync('test.html')
+        // const html = fs.readFileSync('test.html')
 
         const $ = cheerio.load(html);
         const mainNews = {
@@ -54,13 +52,35 @@ exports.handler = async () => {
                 }
             }).get()
 
+        const latestVideosmain = {
+            link: $('.latestVideos .main a.thumbnail').attr('href'),
+            img: $('.latestVideos .main a.thumbnail img.videoThumb__img').attr('src'),
+            runTime: $('.latestVideos .main a.thumbnail .runTime time').text().trim(),
+            title: $('.latestVideos .main a.thumbnail figcaption .title').text().trim(),
+            text: $('.latestVideos .main a.thumbnail figcaption .text').text().trim(),
+            published: $('.latestVideos .rest a.thumbnail figcaption .published').text().trim(),
+
+        }
+        const latestVideosSecoundary = $('.latestVideos .rest a').map((i, a) => {
+            return {
+                link: $(a).find('.thumbnail').attr('href'),
+                img: $(a).find('.thumbnail img.videoThumb__img').attr('src'),
+                runTime: $(a).find('.thumbnail .runTime time').text().trim(),
+                title: $(a).find('.thumbnail figcaption .title').text().trim(),
+                published: $(a).find('.thumbnail figcaption .published').text().trim(),
+            }
+
+        }).get()
 
         return {
             statusCode: 200,
             body: JSON.stringify({
                 res: {
-                    mainNews,
-                    secoundryNews
+                    // mainNews,
+                    // secoundryNews,
+                    latestVideosmain,
+                    latestVideosSecoundary
+
                 }
             }),
             headers: {
@@ -69,7 +89,7 @@ exports.handler = async () => {
         }
     } catch (err) {
         return {
-            status: 500,
+            statusCode: 500,
             body: JSON.stringify('internal server error')
         }
     }

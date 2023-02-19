@@ -2,7 +2,7 @@ const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 exports.handler = async () => {
-  try{
+  try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://www.premierleague.com/home');
@@ -10,11 +10,11 @@ exports.handler = async () => {
     await page.waitForSelector('.day')
     const html = await page.content();
     fs.writeFileSync('test.html', html);
-  
+
     // const html = fs.readFileSync('test.html');
-  
+
     const $ = cheerio.load(html);
-    const getData = (element) =>{
+    const getData = (element) => {
       const homeTeamAbb = $(element).find('.teamName abbr').eq(0).text().trim();
       const awayTeamAbb = $(element).find('.teamName abbr').eq(1).text().trim();
       const homeTeamName = $(element).find('.teamName abbr').eq(0).attr('title');
@@ -25,38 +25,38 @@ exports.handler = async () => {
       const matchStartsAt = $(element).find('time').attr('data-kickoff') || 'end';
       const broadcasterImage = $(element).find('.broadcaster-image').attr('src');
       const minutes = $(element).find('.js-minutes').text().trim();
-      const isLive =  $(element).hasClass('js-live-fixture');
-      const match = {minutes,isLive,broadcasterImage, homeTeamAbb, awayTeamAbb,homeTeamName, awayTeamName, homeTeamImg, awayTeamImg ,matchScore, matchStartsAt};
-  
+      const isLive = $(element).hasClass('js-live-fixture');
+      const match = { minutes, isLive, broadcasterImage, homeTeamAbb, awayTeamAbb, homeTeamName, awayTeamName, homeTeamImg, awayTeamImg, matchScore, matchStartsAt };
+
       return match
     }
-  
-    const matches =  $('.day').map((i,day) =>{
+
+    const matches = $('.day').map((i, day) => {
       const htmlMatches = $('.matchListContainer .matchAbridged').filter('[href]');
-      const time =  $(day).find('time').text().trim();
+      const time = $(day).find('time').text().trim();
       let events;
       if (htmlMatches.length > 1) {
-          events = htmlMatches.map((index, element) => {
+        events = htmlMatches.map((index, element) => {
           const match = getData(element);
           return (match);
         }).get();
-      }else{
+      } else {
         const match = getData(htmlMatches);
-        return(match);
+        return (match);
       }
       return {
         time,
         events
       }
     }).get();
-  
-  
-    const week =  $('.fixturesAbridgedHeader header .week').text().trim();
-  
+
+
+    const week = $('.fixturesAbridgedHeader header .week').text().trim();
+
     return {
       statusCode: 200,
       body: JSON.stringify({
-        res:{
+        res: {
           week,
           matches
         }
@@ -65,10 +65,10 @@ exports.handler = async () => {
         "Content-Type": "application/json"
       }
     }
-  }catch (err){
+  } catch (err) {
     return {
-      status:500,
-      body:JSON.stringify('internal server error')
+      statusCode: 500,
+      body: JSON.stringify('internal server error')
     }
   }
 
