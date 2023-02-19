@@ -70,6 +70,33 @@ exports.handler = async () => {
                 published: $(a).find('.thumbnail figcaption .published').text().trim(),
             }
 
+        }).get();
+        const latestNews = $('.mainWidget.latestFeatures').map((i, latestFeatures) => {
+            const header = $(latestFeatures).find('header .subHeader').text().trim();
+            const list = $(latestFeatures).first().find('ul li').map((j, li) => {
+                return {
+                    link: $(li).find('a.thumbnail').attr('href'),
+                    img: $(li).find('a.thumbnail figure img.article-thumb__img').attr('src'),
+                    tag: $(li).find('a.thumbnail figure figcaption .tag').text().trim(),
+                    title: $(li).find('a.thumbnail figure figcaption .title').text().trim(),
+                    relatedArticles: $(li).find('.relatedArticles a').map((k, a) => {
+                        return {
+                            link: $(a).attr('href'),
+                            isVideo: $(a).hasClass('video'),
+                            text: $(a).find('p').text().trim(),
+                            imgIcon: $(a).find('.badge-image').attr('src'),
+
+                        }
+                    }).get(),
+
+
+                }
+            }).get();
+            return {
+                header,
+                list
+            }
+
         }).get()
 
         return {
@@ -78,8 +105,9 @@ exports.handler = async () => {
                 res: {
                     // mainNews,
                     // secoundryNews,
-                    latestVideosmain,
-                    latestVideosSecoundary
+                    // latestVideosmain,
+                    // latestVideosSecoundary
+                    latestNews
 
                 }
             }),
