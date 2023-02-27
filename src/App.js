@@ -3,31 +3,17 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import Fixture from './pages/Fixture';
 import Results from './pages/Results';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/results",
-    element: <Results />,
-  },
-  {
-    path: "/fixture",
-    element: <Fixture />,
-  },
-]);
+import { Route, Routes } from 'react-router-dom';
 
 function App(props) {
   return (
     <>
       <Nav />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/results' element={<Results />} />
+        <Route path='/fixture' element={<Fixture />} />
+      </Routes>
     </>
   );
 }
