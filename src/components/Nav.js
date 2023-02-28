@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { GoThreeBars } from 'react-icons/go';
 import { BiFootball } from 'react-icons/bi';
 import { MdEmojiEvents } from 'react-icons/md';
@@ -34,12 +34,13 @@ function Nav() {
               return (
                 <li
                   key={i}
-                  className={`text-lg ${i === 0
-                    ? 'text-secoundary-light font-bold cursor-pointer'
-                    : 'text-white cursor-pointer'
-                    }`}
+                  className='text-lg'
                 >
-                  <Link to={el?.link}>{el?.name}</Link>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? 'text-secoundary-light cursor-pointer' : 'text-white cursor-pointer'
+                    }
+                    to={el?.link}>{el?.name}</NavLink>
                 </li>
               );
             })}
@@ -64,11 +65,11 @@ function Nav() {
               <li
                 onClick={() => setSideBarOpen(false)}
                 key={i}
-                className={`text-clr-main hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark border-t-2 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'} bg-primary-light duration-300 flex gap-2 items-center group hover:pl-6`}
+                className={`text-clr-main hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
               >
-                <Link to={el?.link} className='w-full  p-3'>
+                <NavLink to={el?.link} className={`w-full border-t-2  p-3 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'} hover:pl-6 duration-300`}>
                   {el?.icon} {el.name}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
