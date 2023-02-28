@@ -17,7 +17,7 @@ function Nav() {
   return (
     <main>
       {/* mobile */}
-      <section className='p-2 bg-primary text-white flex justify-between items-center  text-xl'>
+      <section className='z-10000 p-2 bg-primary text-white flex justify-between items-center  text-xl'>
         <article className='flex items-center'>
           <span className='text-3xl pr-1 cursor-pointer w-20 mr-[-15px]'>
             <img src={PL} alt='img' />
@@ -58,7 +58,7 @@ function Nav() {
           </button>
         </article>
       </section>
-      <section className={`md:hidden absolute w-full h-[calc(100%-67px)] bg-primary top-[clac(100%-38px)] left-0 pt-2 ${sideBarOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'} transition-all duration-300 `}>
+      <section className={`z-100 md:hidden absolute w-full h-[calc(100%-67px)] bg-primary top-[clac(100%-38px)] left-0 pt-2 ${sideBarOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'} transition-all duration-300 `}>
         <ul className='list-none'>
           {nav?.map((el, i) => {
             return (

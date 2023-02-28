@@ -1,10 +1,11 @@
 import React from 'react';
+import MainHome from '../components/MainHome';
 
 function Home(props) {
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <MainHome />
+        </>
     );
 }
 
