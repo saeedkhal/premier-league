@@ -3,6 +3,7 @@ import MainNews from './MainNews';
 import Sponsores from './Sponsores';
 import LatestNews from './LatestNews';
 import LatestVideos from './LatestVideos';
+import Footer from './Footer';
 
 function MainHome() {
     const [activeTab, setActiveTab] = useState(1);
