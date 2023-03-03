@@ -21,7 +21,7 @@ function MainNews(props) {
                     </article>
                     <article className='px-3 text-white'>
                         <h1 className='text-3xl mt-5 font-bold mb-5 md:text-5xl lg:text-6xl'>FPL Gameweek 26 Differentials</h1>
-                        <p className='text-clr-dark md:text-md lg:text-xl'>These four Fantasy gems are owned by hardly any managers despite their big points potential</p>
+                        <p className='md:text-md lg:text-xl font-light'>These four Fantasy gems are owned by hardly any managers despite their big points potential</p>
                         <div className='hidden lg:block '>
                             <p className='mt-5 font-bold lg:mb-4 md:mt-8'>Realted Content</p>
                             <ui className='list-none mt-2 text-md'>
@@ -29,19 +29,19 @@ function MainNews(props) {
                                     <i className='text-2xl bg-white rounded-full text-secoundary center w-11 h-11 flex items-center justify-center'>
                                         <TbNews />
                                     </i>
-                                    <sapn className='text-clr-dark'> Match officials for Matchweek 25's midweek fixtures</sapn>
+                                    <sapn className='text-clr-dark font-light'> Match officials for Matchweek 25's midweek fixtures</sapn>
                                 </li>
                                 <li className='flex items-center gap-5 mb-2'>
                                     <i className='text-2xl bg-white rounded-full text-secoundary center w-11 h-11 flex items-center justify-center'>
                                         <TbNews />
                                     </i>
-                                    <sapn className='text-clr-dark'> Match officials for Matchweek 25's midweek fixtures</sapn>
+                                    <sapn className='text-clr-dark font-light'> Match officials for Matchweek 25's midweek fixtures</sapn>
                                 </li>
                                 <li className='flex items-center gap-5 mb-2'>
                                     <i className='text-2xl bg-white rounded-full text-secoundary center w-11 h-11 flex items-center justify-center'>
                                         <BsPlayFill />
                                     </i>
-                                    <sapn className='text-clr-dark'> Match officials for Matchweek 25's midweek fixtures</sapn>
+                                    <sapn className='text-clr-dark font-light'> Match officials for Matchweek 25's midweek fixtures</sapn>
                                 </li>
                             </ui>
                         </div>

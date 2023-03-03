@@ -15,7 +15,7 @@ module.exports = {
       'white': '#fff',
       'black': '#000',
 
-      'clr-main': '#FAFAFA',
+      'clr-main': '#5b5b5b',
       'clr-light': '#ffffff',
       'clr-dark': '#b7b6b7',
       'neutral': '#07EDBD'
