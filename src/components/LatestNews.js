@@ -23,7 +23,7 @@ function LatestNews(props) {
                     <h1 className='font-bold text-xl'>Premier League Awards</h1>
                     <a className='font-medium text-md group' href='/'>
                         <div className='flex items-center gap-2'>
-                            <span className='group-hover:underline group-hover:text-secoundary'>
+                            <span className='group-hover:underline'>
                                 Awards
                             </span>
                             <i className='text-secoundary group-hover:translate-x-1 duration-200'><AiOutlineArrowRight /></i>
@@ -31,19 +31,16 @@ function LatestNews(props) {
                     </a>
                 </section>
                 <div className='md:grid md:grid-cols-3 gap-2'>
-                    <a href='/'>
-
+                    <a href='/' className='group'>
                         <section className='flex md:gap-10 gap-4 mb-2 md:block'>
                             <article className='max-w-[200px] md:max-w-full'>
                                 <img className='w-full' src={NE1} alt='NE1' />
                             </article>
                             <article className='self-center md:px-2'>
                                 <h5 className='text-secoundary italic font-bold mt-1'>News</h5>
-                                <a href='/'>
-                                    <p className='md:leading-8 md:text-xl font-light  hover:underline hover:text-secoundary text-clr-main'>
-                                        Campbell: Arsenal's home fixtures hold key to title push
-                                    </p>
-                                </a>
+                                <p className='md:leading-8 md:text-xl font-light hover:underline text-clr-main group-hover:underline'>
+                                    Campbell: Arsenal's home fixtures hold key to title push
+                                </p>
                                 <div className='hidden md:block my-1 bg-clr-dark h-[1px] opacity-20' />
                             </article>
                             <article className='hidden md:block text-[#5b5b5b] mt-3'>
