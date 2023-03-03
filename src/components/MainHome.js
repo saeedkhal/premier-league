@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MainNews from './MainNews';
 import Sponsores from './Sponsores';
 import LatestNews from './LatestNews';
+import LatestVideos from './LatestVideos';
 
 function MainHome() {
     const [activeTab, setActiveTab] = useState(1);
@@ -21,6 +22,7 @@ function MainHome() {
                 </div>
                 <MainNews />
                 <Sponsores />
+                <LatestVideos />
                 <LatestNews />
                 {/* End Mobile */}
             </main>

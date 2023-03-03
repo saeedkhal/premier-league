@@ -1,11 +1,12 @@
 import React from 'react';
 import { TbNews } from 'react-icons/tb';
 import { BsPlayFill } from 'react-icons/bs';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
 import NE1 from '../assets/img/NE1.webp';
-import NE2 from '../assets/img/NE2.webp';
-import NE3 from '../assets/img/NE3.webp';
+// import NE2 from '../assets/img/NE2.webp';
+// import NE3 from '../assets/img/NE3.webp';
 // import NE4 from '../assets/img/NE4.webp';
 // import NE5 from '../assets/img/NE5.webp';
 // import NE6 from '../assets/img/NE6.webp';
@@ -20,12 +21,12 @@ function LatestNews(props) {
             <main>
                 <section className='flex justify-between my-5'>
                     <h1 className='font-bold text-xl'>Premier League Awards</h1>
-                    <a className='font-medium text-md' href='/'>
-                        <div>
-                            <span>
+                    <a className='font-medium text-md group' href='/'>
+                        <div className='flex items-center gap-2'>
+                            <span className='group-hover:underline group-hover:text-secoundary'>
                                 Awards
                             </span>
-                            <i className='text-secoundary hover:translate-x-1 duration-200'>{'=>'}</i>
+                            <i className='text-secoundary group-hover:translate-x-1 duration-200'><AiOutlineArrowRight /></i>
                         </div>
                     </a>
                 </section>

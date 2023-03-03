@@ -47,7 +47,7 @@ function MainNews(props) {
                         </div>
                     </article>
                 </section>
-                <section className='lg:flex gap-5'>
+                <section className='lg:flex gap-5 font-light'>
                     <section className='mb-5 text-white'>
                         <article className='flex gap-3 bg-primary-light'>
                             <div>

@@ -15,7 +15,7 @@ import SP10 from '../assets/img/SP10.webp'
 const images = [SP1, SP2, SP3, SP4, SP5, SP6, SP7, SP8, SP9, SP10]
 function Sponsores() {
     return (
-        <div className='owl-container my-10 bg-clr-dark border-b-8 border-secoundary p'>
+        <div className='owl-container my-10 bg-clr-dark border-b-8 border-secoundary'>
             <OwlCarousel className='owl-theme' loop margin={10} smartSpeed={1000} autoplayTimeout={3000} autoplay={true}>
                 {
                     images?.map((el, i) => <div className='item' key={i}>
