@@ -3,7 +3,7 @@ import MainNews from './MainNews';
 import Sponsores from './Sponsores';
 import LatestNews from './LatestNews';
 import LatestVideos from './LatestVideos';
-import Footer from './Footer';
+import Matches from './Matches';
 
 function MainHome() {
     const [activeTab, setActiveTab] = useState(1);
@@ -21,10 +21,16 @@ function MainHome() {
                     </section>
 
                 </div>
-                <MainNews />
-                <Sponsores />
-                <LatestVideos />
-                <LatestNews />
+                {
+                    activeTab === 1 ?
+                        <>
+                            <MainNews />
+                            <Sponsores />
+                            <LatestVideos />
+                            <LatestNews />
+                        </> : <Matches />
+                }
+
                 {/* End Mobile */}
             </main>
         </>
