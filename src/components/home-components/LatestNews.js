@@ -4,7 +4,7 @@ import { BsPlayFill } from 'react-icons/bs';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
-import NE1 from '../assets/img/NE1.webp';
+import NE1 from '../../assets/img/NE1.webp';
 // import NE2 from '../assets/img/NE2.webp';
 // import NE3 from '../assets/img/NE3.webp';
 // import NE4 from '../assets/img/NE4.webp';

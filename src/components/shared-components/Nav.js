@@ -4,7 +4,7 @@ import { GoThreeBars } from 'react-icons/go';
 import { BiFootball } from 'react-icons/bi';
 import { MdEmojiEvents } from 'react-icons/md';
 import { RxTable, RxCross2 } from 'react-icons/rx';
-import PL from '../assets/img/PL.png';
+import PL from '../../assets/img/PL.png';
 
 function Nav() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -17,7 +17,7 @@ function Nav() {
   return (
     <main className='z-10 sticky w-full top-0'>
       {/* mobile */}
-      <section className='p-2 bg-primary text-white flex justify-between items-center  text-xl'>
+      <section className='p-2 bg-primary text-white flex justify-between items-center  text-xl xl:border-b-2 xl:border-secoundary'>
         <article className='flex items-center'>
           <span className='text-3xl pr-1 cursor-pointer w-20 mr-[-15px]'>
             <img src={PL} alt='img' />
@@ -65,7 +65,7 @@ function Nav() {
               <li
                 onClick={() => setSideBarOpen(false)}
                 key={i}
-                className={`text-clr-main hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
+                className={`text-clr-dark hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
               >
                 <NavLink to={el?.link} className={`w-full border-t-2  p-3 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'} hover:pl-6 duration-300`}>
                   {el?.icon} {el.name}

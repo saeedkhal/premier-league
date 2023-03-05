@@ -1,5 +1,5 @@
 import React from 'react';
-import SALogo from '../assets/img/SALogo.svg'
+import SALogo from '../../assets/img/SALogo.svg'
 function Footer(props) {
     return (
         <footer className='bg-gradient-to-r from-primary-dark to-secoundary text-white p-5 text-center'>

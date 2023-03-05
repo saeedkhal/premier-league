@@ -1,7 +1,7 @@
 import React from 'react';
-import MI from '../assets/img/MI.webp';
-import SI1 from '../assets/img/SI1.webp';
-import SI2 from '../assets/img/SI2.webp';
+import MI from '../../assets/img/MI.webp';
+import SI1 from '../../assets/img/SI1.webp';
+import SI2 from '../../assets/img/SI2.webp';
 import { FaPlay } from 'react-icons/fa';
 import { TbNews } from 'react-icons/tb';
 import { BsPlayFill } from 'react-icons/bs';
@@ -10,7 +10,7 @@ import { BsPlayFill } from 'react-icons/bs';
 
 function MainNews(props) {
     return (
-        <div className='z-0 relative px-1 py-5 before:z-[-1] before:content-[""] before:absolute before:h-full before:w-[calc(100%+1rem)] before:bg-primary before:top-0 before:left-0 before:translate-x-[-0.5rem]'>
+        <div className='z-0 relative px-1 py-5 xl:p-5 before:z-[-1] before:content-[""] before:absolute before:h-full before:w-[calc(100%+1rem)] before:bg-primary before:top-0 before:left-0 before:translate-x-[-0.5rem] before:xl:translate-x-[0]'>
             <main className='relative z-[-1]'>
                 <section className='mb-5 md:flex md:gap-10'>
                     <article className='relative'>

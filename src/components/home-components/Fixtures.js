@@ -1,13 +1,13 @@
 import React from 'react';
 import { SiPremierleague } from 'react-icons/si'
-import MCU from '../assets/img/MCU.png';
-import NEW from '../assets/img/NEW.png';
-import BIN from '../assets/img/BIN.png';
+import MCU from '../../assets/img/MCU.png';
+import NEW from '../../assets/img/NEW.png';
+import BIN from '../../assets/img/BIN.png';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
-function Fixtures(props) {
+function Fixtures() {
     return (
-        <main>
+        <main className='xl:mt-3 xl:min-w-[250px]'>
             <section className='text-center'>
                 <p className='text-secoundary font-bold'>Matchweek 26</p>
                 <span className='text-primary text-xl font-bold'>

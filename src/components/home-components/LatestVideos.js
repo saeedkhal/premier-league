@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import Vi1 from '../assets/img/VI1.webp';
-import Vi2 from '../assets/img/VI2.webp';
+import Vi1 from '../../assets/img/VI1.webp';
+import Vi2 from '../../assets/img/VI2.webp';
 import { BsFillPlayFill } from 'react-icons/bs';
 function latestVideos() {
     return (
