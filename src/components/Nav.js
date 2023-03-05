@@ -15,7 +15,7 @@ function Nav() {
   ];
   const iconStyle = { fontSize: '30px', cursor: 'pointer' }
   return (
-    <main className='z-10'>
+    <main className='z-10 sticky w-full top-0'>
       {/* mobile */}
       <section className='p-2 bg-primary text-white flex justify-between items-center  text-xl'>
         <article className='flex items-center'>
@@ -58,7 +58,7 @@ function Nav() {
           </button>
         </article>
       </section>
-      <section className={`z-10 md:hidden absolute w-full h-[calc(100%-67px)] bg-primary top-[clac(100%-38px)] left-0 pt-2 ${sideBarOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'} transition-all duration-300 `}>
+      <section className={`z-10 md:hidden fixed w-full h-[calc(100%-67px)] bg-primary top-[clac(100%-38px)] left-0 pt-2 ${sideBarOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'} transition-all duration-300 `}>
         <ul className='list-none'>
           {nav?.map((el, i) => {
             return (
