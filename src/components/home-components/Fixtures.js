@@ -7,7 +7,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Fixtures() {
     return (
-        <main className='xl:mt-3 xl:min-w-[250px]'>
+        <main className='xl:mt-3 xl:min-w-[320px]'>
             <section className='text-center'>
                 <p className='text-secoundary font-bold'>Matchweek 26</p>
                 <span className='text-primary text-xl font-bold'>
@@ -21,10 +21,10 @@ function Fixtures() {
                 <date className='text-clr-dark font-bold'>
                     Saturday 4 March
                 </date>
-                <a href='/' className='group border-b-2 border-clr-dark mb-5 block p-5 pb-2 hover:border-secoundary backdrop:duration-300'>
+                <a href='/' className='group border-b-2 border-clr-dark mb-5 block p-5 pb-2 hover:border-secoundary backdrop:duration-300 xl:px-0'>
                     <article className='flex items-center [&>div]:flex [&>div]:items-center justify-center relative'>
                         <div>
-                            <team className='mx-2 font-bold'>MCI</team>
+                            <team className='mr-2 font-bold'>MCI</team>
                             <img width='30px' src={MCU} alt='img' />
                         </div>
                         <div className='font-light px-2 border border-clr-dark mx-3 text-sm'>
@@ -32,7 +32,7 @@ function Fixtures() {
                         </div>
                         <div>
                             <img width='30px' src={NEW} alt='img' />
-                            <team className='mx-2 font-bold'>NEW</team>
+                            <team className='ml-2 font-bold'>NEW</team>
                         </div>
                         <div className='absolute right-0 group-hover:text-secoundary group-hover:translate-x-2 duration-300'>
                             <AiOutlineArrowRight />
@@ -42,10 +42,10 @@ function Fixtures() {
                         <img width='80px' src={BIN} alt='beinlog' className='m-auto' />
                     </article>
                 </a>
-                <a href='/' className='group border-b-2 border-clr-dark mb-5 block p-5 pb-2 hover:border-secoundary backdrop:duration-300'>
+                <a href='/' className='group border-b-2 border-clr-dark mb-5 block p-5 pb-2 hover:border-secoundary backdrop:duration-300 xl:px-0'>
                     <article className='flex items-center [&>div]:flex [&>div]:items-center justify-center relative'>
                         <div>
-                            <team className='mx-2 font-bold'>MCI</team>
+                            <team className='mr-2 font-bold'>MCI</team>
                             <img width='30px' src={MCU} alt='img' />
                         </div>
                         <div className='font-light px-2 border border-clr-dark mx-3 text-sm'>
@@ -53,7 +53,7 @@ function Fixtures() {
                         </div>
                         <div>
                             <img width='30px' src={NEW} alt='img' />
-                            <team className='mx-2 font-bold'>NEW</team>
+                            <team className='ml-2 font-bold'>NEW</team>
                         </div>
                         <div className='absolute right-0 group-hover:text-secoundary group-hover:translate-x-2 duration-300'>
                             <AiOutlineArrowRight />

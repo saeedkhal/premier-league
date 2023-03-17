@@ -11,7 +11,7 @@ function MainHome() {
 
     return (
         <>
-            <main className='p-2 xl:p-5 xl:pt-0'>
+            <main className='p-2 xl:p-0'>
                 {/* Mobile */}
                 <div className={`my-5 px-1 py-1 flex rounded-sm bg-secoundary xl:hidden max-w-md m-auto`}>
                     <section onClick={(() => setActiveTab(1))} className={`text-center grow ${activeTab === 1 ? 'bg-white' : 'text-white'} py-2 font-bold rounded-sm cursor-pointer`}>
@@ -39,7 +39,7 @@ function MainHome() {
                     }
                 </section>
                 <section className='hidden xl:flex gap-10 p-10'>
-                    <div>
+                    <div className='grow-1'>
                         <Fixtures />
                         <Featured />
                     </div>

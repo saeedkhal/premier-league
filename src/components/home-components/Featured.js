@@ -26,15 +26,14 @@ function Featured(props) {
             <h1 className='text-2xl font-bold p-3'>
                 Featured Player
             </h1>
-            <section className='bg-primary p-5 pb-0 text-white flex justify-between items-center'>
+            <section className='bg-primary px-5 pt-2 text-white flex justify-between items-center'>
                 <div>
-
                     <h1 className='text-xl font-bold'>Riyad Mahrez</h1>
                     <p className='italic'>Forward</p>
                     <article className='font-light'>Algeria</article>
                 </div>
-                <div>
-                    <img src={F1} alt='F1' />
+                <div className='max-w-[35%] xl:max-w-[40%]'>
+                    <img className='w-full' src={F1} alt='F1' />
                 </div>
             </section>
             <section className='flex justify-between p-5 border-b-2 border-b-clr-dark'>

@@ -10,7 +10,7 @@ import { BsPlayFill } from 'react-icons/bs';
 
 function MainNews(props) {
     return (
-        <div className='z-0 relative px-1 py-5 xl:p-5 before:z-[-1] before:content-[""] before:absolute before:h-full before:w-[calc(100%+1rem)] before:bg-primary before:top-0 before:left-0 before:translate-x-[-0.5rem] before:xl:translate-x-[0]'>
+        <div className='z-0 relative px-1 py-5 xl:p-5 before:z-[-1] before:content-[""] before:absolute before:h-full before:w-[calc(100%+1rem)] before:bg-primary before:top-0 before:left-0 before:translate-x-[-0.5rem] before:xl:translate-x-[0] xl:before:w-full'>
             <main className='relative z-[-1]'>
                 <section className='mb-5 md:flex md:gap-10'>
                     <article className='relative'>
