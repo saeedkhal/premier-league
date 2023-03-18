@@ -9,8 +9,7 @@ exports.handler = async () => {
     await page.waitForFunction('window.performance.timing.domContentLoadedEventEnd > 0');
     await page.waitForSelector('.day')
     const html = await page.content();
-    fs.writeFileSync('test.html', html);
-
+    fs.writeFileSync('events.html', html);
     // const html = fs.readFileSync('test.html');
 
     const $ = cheerio.load(html);
@@ -56,10 +55,8 @@ exports.handler = async () => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        res: {
-          week,
-          matches
-        }
+        week,
+        matches
       }),
       headers: {
         "Content-Type": "application/json"
@@ -68,7 +65,10 @@ exports.handler = async () => {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify('internal server error')
+      body: JSON.stringify({
+        status: 500,
+        message: 'Internal Server Error'
+      })
     }
   }
 
