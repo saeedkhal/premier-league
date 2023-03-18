@@ -21,7 +21,7 @@ exports.handler = async () => {
       const homeTeamImg = $(element).find('img').eq(0).attr('src');
       const awayTeamImg = $(element).find('img').eq(1).attr('src');
       const matchScore = $(element).find('.score').text().trim() || "0-0";
-      const matchStartsAt = $(element).find('time').attr('data-kickoff') || 'end';
+      const matchStartsAt = $(element).find('time').attr('data-kickoff') || null;
       const broadcasterImage = $(element).find('.broadcaster-image').attr('src');
       const minutes = $(element).find('.js-minutes').text().trim();
       const isLive = $(element).hasClass('js-live-fixture');
@@ -31,18 +31,23 @@ exports.handler = async () => {
     }
 
     const matches = $('.day').map((i, day) => {
-      const htmlMatches = $('.matchListContainer .matchAbridged').filter('[href]');
+      const htmlMatches = $(day).find('.matchAbridged').filter('[href]');
       const time = $(day).find('time').text().trim();
       let events;
-      if (htmlMatches.length > 1) {
-        events = htmlMatches.map((index, element) => {
-          const match = getData(element);
-          return (match);
-        }).get();
-      } else {
-        const match = getData(htmlMatches);
-        return (match);
+      if (!htmlMatches.length) {
+        return {
+          time: null,
+          events: []
+        }
       }
+      events = htmlMatches.map((index, element) => {
+        const match = getData(element);
+        return {
+          time,
+          match
+        };
+      }).get();
+
       return {
         time,
         events

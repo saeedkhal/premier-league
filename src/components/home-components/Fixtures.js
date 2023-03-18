@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SiPremierleague } from 'react-icons/si'
 import MCU from '../../assets/img/MCU.png';
 import NEW from '../../assets/img/NEW.png';
 import BIN from '../../assets/img/BIN.png';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchEvents } from '../../features/events/eventsSlice'
 function Fixtures() {
+    const dispatch = useDispatch();
+
+    const events = useSelector(state => state?.events.data);
+
+    useEffect(() => {
+        dispatch(fetchEvents());
+    }, []);
     return (
         <main className='xl:mt-3 xl:min-w-[320px]'>
             <section className='text-center'>
@@ -18,13 +26,13 @@ function Fixtures() {
                 <p className='font-light text-clr-main text-sm'>All times shown are your <span className='font-bold'>local time</span> </p>
             </section>
             <section className='text-center mt-10'>
-                <date className='text-clr-dark font-bold'>
+                <span className='text-clr-dark font-bold'>
                     Saturday 4 March
-                </date>
+                </span>
                 <a href='/' className='group border-b-2 border-clr-dark mb-5 block p-5 pb-2 hover:border-secoundary backdrop:duration-300 xl:px-0'>
                     <article className='flex items-center [&>div]:flex [&>div]:items-center justify-center relative'>
                         <div>
-                            <team className='mr-2 font-bold'>MCI</team>
+                            <span className='mr-2 font-bold'>MCI</span>
                             <img width='30px' src={MCU} alt='img' />
                         </div>
                         <div className='font-light px-2 border border-clr-dark mx-3 text-sm'>
