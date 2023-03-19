@@ -5,12 +5,13 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchEvents } from '../../features/events/eventsSlice';
 import moment from 'moment';
+import Loading from '../sharedComponents/loading';
 
 
 function Fixtures() {
     const dispatch = useDispatch();
 
-    const events = useSelector(state => state?.events.data);
+    const {data, loading} = useSelector(state => state?.events);
 
     useEffect(() => {
         dispatch(fetchEvents());
@@ -18,7 +19,7 @@ function Fixtures() {
     return (
         <main className='xl:mt-3 xl:min-w-[320px]'>
             <section className='text-center'>
-                <p className='text-secoundary font-bold'>{events?.week}</p>
+                <p className='text-secoundary font-bold'>{data?.week}</p>
                 <span className='text-primary text-xl font-bold'>
                     Premier
                     <SiPremierleague style={{ display: 'inline-block' }} />
@@ -27,7 +28,7 @@ function Fixtures() {
                 <p className='font-light text-clr-main text-sm'>All times shown are your <span className='font-bold'>local time</span> </p>
             </section>
             {
-                !events ? <h1 className='text-center mt-2 text-black'>No Matches Available</h1> : events?.matches?.map(match => {
+                loading ? <Loading /> :  data?.matches?.map(match => {
                     return <div key={match?.time}>
                         <section className='text-center mt-10'>
                             <span className='font-bold'>
@@ -56,8 +57,11 @@ function Fixtures() {
                                             {<img width='80px' src={BIN} alt='beinlog' className='m-auto' />}
                                         </article>
                                         <article className={`${event?.isLive ? 'flex' : 'hidden'} justify-center items-center gap-2`}>
-                                          <span className='w-2 h-2 rounded bg-[red]'> </span> 
-                                        <span>live</span>
+                                        <span class="relative flex h-2 w-2">
+                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[red] opacity-75"></span>
+                                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[red]"></span>
+                                        </span>
+                                        live
                                         </article>
                                     </a>
                                 </div>

@@ -32,14 +32,12 @@ exports.handler = async () => {
                 missingImg,
                 playerImg,
                 statsList
-                // club: $(statsCard).find('ul.statsList li.statsRow').eq(1).find('.stat a').text().trim(),
-                // clubLink: $(statsCard).find('ul.statsList li.statsRow').eq(1).find('.stat a').attr('href'),
             };
 
         }).get();
         return {
             statusCode: 200,
-            body: JSON.stringify({ res: featureCards }),
+            body: JSON.stringify({ cards: featureCards }),
             headers: {
                 "Content-Type": "application/json"
             },

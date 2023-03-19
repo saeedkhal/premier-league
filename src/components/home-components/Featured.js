@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import F1 from '../../assets/img/F1.png';
 import CL1 from '../../assets/img/CL1.png';
-
+import { fetchCards } from '../../features/cards/cardsSlice';
+import { useDispatch } from 'react-redux';
 const Stat = [{
     key: 'Appearances',
     value: 22,
@@ -20,7 +21,11 @@ const Stat = [{
 }
 
 ]
-function Featured(props) {
+function Featured() {
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(fetchCards())
+    },[])
     return (
         <main className='mt-10 shadow-[0_1px_4px_0_rgb(0,0,0,0.15)]'>
             <h1 className='text-2xl font-bold p-3'>
