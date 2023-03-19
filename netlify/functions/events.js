@@ -42,10 +42,7 @@ exports.handler = async () => {
       }
       events = htmlMatches.map((index, element) => {
         const match = getData(element);
-        return {
-          time,
-          match
-        };
+        return match
       }).get();
 
       return {
