@@ -27,7 +27,7 @@ function Fixtures() {
                 <p className='font-light text-clr-main text-sm'>All times shown are your <span className='font-bold'>local time</span> </p>
             </section>
             {
-                events?.matches?.map(match => {
+                !events ? <h1 className='text-center mt-2 text-black'>No Matches Available</h1> : events?.matches?.map(match => {
                     return <div key={match?.time}>
                         <section className='text-center mt-10'>
                             <span className='font-bold'>
@@ -55,8 +55,9 @@ function Fixtures() {
                                         <article className={`my-3  ${event?.matchStartsAt ? 'block' : 'hidden'}`}>
                                             {<img width='80px' src={BIN} alt='beinlog' className='m-auto' />}
                                         </article>
-                                        <article className={`${event?.isLive ? 'block' : 'block'} before:content-[''] before:h-2 before:w-2 before:bg-secoundary before:absolute before:rounded`}>
-                                            live
+                                        <article className={`${event?.isLive ? 'flex' : 'hidden'} justify-center items-center gap-2`}>
+                                          <span className='w-2 h-2 rounded bg-[red]'> </span> 
+                                        <span>live</span>
                                         </article>
                                     </a>
                                 </div>
