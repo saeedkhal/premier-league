@@ -47,7 +47,7 @@ function Featured() {
                             </article>
                     </div>
                     <div className='max-w-[35%] xl:max-w-[40%]'>
-                        <img className='w-full' src={F1} alt='F1' />
+                        <img className='w-full' src={card?.playerImg || card?.missingImg } alt='F1' />
                     </div>
                 </section>
                 <section className='flex justify-between p-5 border-b-2 border-b-clr-dark'>
