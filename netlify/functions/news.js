@@ -46,8 +46,8 @@ exports.handler = async () => {
                     img: $(secondary).find('figure a img').attr('src'),
                     isVideo: $(secondary).find('figure a .hero-playlist__thumbnail-time').hasClass('hero-playlist__thumbnail-time'),
                     time: $(secondary).find('figure a .hero-playlist__thumbnail-time').text().trim(),
-                    tag: $(secondary).find('figcaption .hero-playlist__thumbnail-tag').attr('src'),
-                    title: $(secondary).find('figcaption .hero-playlist__thumbnail-title').attr('src'),
+                    tag: $(secondary).find('figcaption .hero-playlist__thumbnail-tag').text().trim(),
+                    title: $(secondary).find('figcaption .hero-playlist__thumbnail-title').text().trim(),
 
                 }
             }).get()
@@ -102,14 +102,11 @@ exports.handler = async () => {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                res: {
-                    mainNews,
-                    secoundryNews,
-                    latestVideosmain,
-                    latestVideosSecoundary,
-                    latestNews
-
-                }
+                mainNews,
+                secoundryNews,
+                latestVideosmain,
+                latestVideosSecoundary,
+                latestNews
             }),
             headers: {
                 "Content-Type": "application/json"

@@ -52,8 +52,7 @@ exports.handler = async () => {
     }).get();
 
 
-    const week = $('.fixturesAbridgedHeader header .week').text().trim();
-
+    const week = $('.fixturesAbridgedHeader header .week').first().text().trim();
     return {
       statusCode: 200,
       body: JSON.stringify({
