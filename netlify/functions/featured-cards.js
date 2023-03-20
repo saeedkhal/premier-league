@@ -7,7 +7,7 @@ exports.handler = async () => {
         // const html = await request.get('https://www.premierleague.com/home');
         // fs.writeFileSync('test.html', html)
 
-        const html = fs.readFileSync('test.html')
+        const html = fs.readFileSync('cards.html')
 
         const $ = cheerio.load(html);
 
@@ -20,7 +20,8 @@ exports.handler = async () => {
                 if (j === 0) { }
                 else {
                     statsList.push({
-                        [$(li).find('.pos').text().trim()]: $(li).find('.stat').text().trim(),
+                        key:$(li).find('.pos').text().trim(),
+                        value: $(li).find('.stat').text().trim(),
                     })
                 }
             });
@@ -29,6 +30,8 @@ exports.handler = async () => {
                 statName: $(statsCard).find('ul.statsList li.statsHero .statName').text().trim(),
                 playerOrLink: $(statsCard).find('ul.statsList li.statsHero a.statName').attr('href'),
                 position: $(statsCard).find('ul.statsList li.statsHero .position').text().trim(),
+                flagClass: $(statsCard).find('ul.statsList li.statsHero .pos').find('.flag').attr('class'),
+                playerCountry: $(statsCard).find('ul.statsList li.statsHero .playerCountry').text().trim(),
                 missingImg,
                 playerImg,
                 statsList

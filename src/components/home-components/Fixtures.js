@@ -18,7 +18,7 @@ function Fixtures() {
     }, []);
     return (
         <main className='xl:mt-3 xl:min-w-[320px]'>
-            <section className='text-center'>
+            <section className='text-center mb-3'>
                 <p className='text-secoundary font-bold'>{data?.week}</p>
                 <span className='text-primary text-xl font-bold'>
                     Premier
