@@ -22,7 +22,7 @@ function MainHome() {
                     </section>
 
                 </div>
-                <section className='xl:hidden'>
+                <section className='xl:hidden relative'>
                     {
 
                         activeTab === 1 ?
@@ -31,7 +31,8 @@ function MainHome() {
                                 <Sponsores />
                                 <LatestVideos />
                                 <LatestNews />
-                            </> :
+                            </>
+                            :
                             <>
                                 <Fixtures />
                                 <Featured />
@@ -43,7 +44,7 @@ function MainHome() {
                         <Fixtures />
                         <Featured />
                     </div>
-                    <div className='w-1 bg-clr-dark opacity-50 relative'></div>
+                    <div className='w-1 bg-clr-dark opacity-50 relative max-w-[10px]'></div>
                     <div>
                         <MainNews />
                         <Sponsores />
