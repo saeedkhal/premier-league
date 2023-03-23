@@ -39,13 +39,13 @@ function MainHome() {
                             </>
                     }
                 </section>
-                <section className='hidden xl:flex gap-10 p-10'>
-                    <div className='grow-1'>
+                <section className='hidden xl:flex gap-10 p-10 justify-center'>
+                    <div >
                         <Fixtures />
                         <Featured />
                     </div>
                     <div className='w-1 bg-clr-dark opacity-50 relative max-w-[10px]'></div>
-                    <div>
+                    <div >
                         <MainNews />
                         <Sponsores />
                         <LatestVideos />

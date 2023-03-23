@@ -17,7 +17,7 @@ function Sponsores() {
     return (
 
         <>
-            <div className='owl-container my-10 bg-clr-dark border-b-8 border-secoundary max-w-6xl xl:max-w-3xl  m-auto'>
+            <div className='owl-container my-10 bg-clr-dark border-b-8 border-secoundary max-w-6xl xl:max-w-3xl m-auto'>
                 <OwlCarousel smartSpeed={1000} autoplayTimeout={3000} autoplay={true}>
                     {
                         images?.map((el, i) => <div className='item' key={i}>

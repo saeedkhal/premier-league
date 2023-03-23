@@ -1,8 +1,5 @@
 import React from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import Vi2 from '../../assets/img/VI2.webp';
-import { BsFillPlayFill } from 'react-icons/bs';
-import { FaPlay } from 'react-icons/fa'
 import { useSelector } from 'react-redux';
 import VideoPlay from '../shared-components/VideoPlay';
 function LatestVideos() {
@@ -26,7 +23,7 @@ function LatestVideos() {
                         </div>
                     </a>
                 </section>
-                <section className='md:flex gap-3'>
+                <section className='md:grid md:grid-cols-2 gap-3'>
                     <article>
                         <a href='/' className='group'>
                             <div className='text-white text-md relative'>
@@ -43,13 +40,13 @@ function LatestVideos() {
                         {
                             latestVideosSecoundary?.map(el => {
                                 return <a href='/' className='group'>
-                                    <div className='flex gap-3 mt-2 md:mt-0 md:block'>
-                                        <div className='max-w-[50%] relative text-white md:max-w-[100%]'>
+                                    <div className='flex gap-3 mt-2 md:mt-0 md:block items-center'>
+                                        <div className='max-w-[50%] relative text-white md:max-w-[100%] min-w-[240px]'>
                                             <img className='w-full' src={el?.img.replace(/\?.+/, '?width=320&height=180')} alt='' />
                                             <VideoPlay time={el?.runTime} />
                                         </div>
                                         <div>
-                                            <h1 className='text-lg font-light text-clr-main mt-3 md:mt-0 group-hover:underline'>
+                                            <h1 className='text-xl font-light text-clr-main mt-3 md:mt-2 group-hover:underline'>
                                                 {el?.title}
                                             </h1>
                                         </div>

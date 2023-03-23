@@ -52,13 +52,13 @@ function MainNews() {
                     {
                         secoundryNews?.map((el, index) => {
                             return <section key={index} className='mb-5 text-white'>
-                                <article className='flex gap-3 bg-primary-light'>
+                                <article className='flex gap-3 bg-primary-light items-center'>
                                     <div>
                                         <img className='w-[230px] h-full object-cover' src={el?.img} alt='SI1' />
                                     </div>
                                     <div className='p-4'>
                                         <h1 className='font-xl text-neutral font-bold italic'>{el?.tag}</h1>
-                                        <p className='pr-1 leading-5 text-base'>
+                                        <p className='pr-1 leading-5 text-base font-bold'>
                                             {el?.title}
                                         </p>
                                     </div>

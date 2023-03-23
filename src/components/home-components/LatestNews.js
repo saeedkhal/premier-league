@@ -26,12 +26,12 @@ function LatestNews() {
                                     </div>
                                 </a>
                             </section>
-                            <div className={`md:grid grid-cols-${el?.list?.length === 3 ? 3 : 4} gap-2`}>
+                            <div className={`md:grid grid-cols-${el?.list?.length > 4 ? '4' : String(el?.list?.length)} gap-2`}>
                                 {
                                     el?.list?.map((item, i) => {
                                         return <a key={i} href='/' className='group'>
                                             <section className='flex md:gap-10 gap-4 mb-2 md:block'>
-                                                <article className='max-w-[200px] md:max-w-full'>
+                                                <article className='max-w-[200px] md:max-w-full min-w-[200px]'>
                                                     <img className='w-full' src={item?.img.startsWith('https') ? item?.img?.replace(/\?.+/, '?width=500&height=333') : 'https://www.premierleague.com' + item?.img.replace('/sm', '')} alt='NE1' />
                                                 </article>
                                                 <article className='self-center md:px-2'>

@@ -21,7 +21,15 @@ code {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.owl-carousel .owl-stage-outer {
+  /* override */
+  overflow: initial;
+}
 
+#bodyContent {
+  /* override */
+  overflow: hidden;
+}
 
 .flag{
     background-image: url('/public/imgs/flg.png');
