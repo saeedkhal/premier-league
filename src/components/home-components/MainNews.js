@@ -43,7 +43,6 @@ function MainNews() {
                                         </div>
                                     })
                                 }
-
                             </ul>
                         </div>
                     </article>
