@@ -14,8 +14,8 @@ exports.handler = async () => {
             studiumClass: $(club).find('a').attr('class').split(' ')[1],
             clubImg: $(club).find('a img.badge-image').attr('src'),
             clubName: $(club).find('a .clubColourBg .clubName').text().trim(),
-            stadiumName: $(club).find('a .clubColourBg .stadiumName').text().trim()
-
+            stadiumName: $(club).find('a .clubColourBg .stadiumName').text().trim(),
+            smallClubImg: $(club).find('a .clubColourBg img.badge-image').attr('src'),
         }
     }).get()
     try {

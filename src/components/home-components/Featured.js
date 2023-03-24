@@ -7,6 +7,7 @@ function Featured() {
     const { data } = useSelector(state => state?.cards)
     useEffect(() => {
         dispatch(fetchCards())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
 

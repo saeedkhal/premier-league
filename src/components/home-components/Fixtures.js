@@ -15,6 +15,7 @@ function Fixtures() {
 
     useEffect(() => {
         dispatch(fetchEvents());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
         <main className='xl:mt-3 xl:min-w-[320px]'>
