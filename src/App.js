@@ -3,7 +3,7 @@ import Nav from './components/shared-components/Nav';
 import Home from './pages/Home';
 import Fixtures from './pages/Fixtures';
 import Results from './pages/Results';
-import Test from './pages/Test';
+import Clubs from './pages/Clubs';
 import { Route, Routes } from 'react-router-dom';
 
 function App(props) {
@@ -15,7 +15,7 @@ function App(props) {
           <Route exact path='/' element={<Home />} />
           <Route path='/results' element={<Results />} />
           <Route path='/fixtures' element={<Fixtures />} />
-          <Route path='/test' element={<Test />} />
+          <Route path='/clubs/' element={<Clubs />} />
         </Routes>
       </div>
     </>

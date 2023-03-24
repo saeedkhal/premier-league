@@ -26,7 +26,7 @@ function LatestNews() {
                                     </div>
                                 </a>
                             </section>
-                            <div className={`md:grid grid-cols-${el?.list?.length > 4 ? '4' : String(el?.list?.length)} gap-2`}>
+                            <div className={`md:grid gap-2 grid-cols-${el?.list?.length > 4 ? '4' : String(el?.list?.length)} ${el?.list?.length === 2 ? 'grid-cols-2' : ''}`}>
                                 {
                                     el?.list?.map((item, i) => {
                                         return <>

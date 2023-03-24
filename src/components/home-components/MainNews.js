@@ -47,10 +47,10 @@ function MainNews() {
                         </div>
                     </article>
                 </section>
-                <section className='lg:flex gap-5 font-light'>
+                <section className='lg:grid grid-cols-2 gap-5 font-light'>
                     {
                         secoundryNews?.map((el, index) => {
-                            return <section key={index} className='mb-5 text-white'>
+                            return <section key={index} className='mb-5 text-white grow'>
                                 <article className='flex gap-3 bg-primary-light items-center'>
                                     <div>
                                         <img className='w-[230px] h-full object-cover' src={el?.img} alt='SI1' />

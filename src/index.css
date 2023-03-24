@@ -31,6 +31,12 @@ code {
   overflow: hidden;
 }
 
+.club-studeuim{
+  background-image: url('https://www.premierleague.com/resources/prod/v6.115.1-5099/i/stadiums/club-index/t91.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .flag{
     background-image: url('/public/imgs/flg.png');
     width: 30px;

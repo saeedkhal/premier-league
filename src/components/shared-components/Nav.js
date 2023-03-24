@@ -4,6 +4,7 @@ import { GoThreeBars } from 'react-icons/go';
 import { BiFootball } from 'react-icons/bi';
 import { MdEmojiEvents } from 'react-icons/md';
 import { RxTable, RxCross2 } from 'react-icons/rx';
+import { TbBuildingStadium } from 'react-icons/tb';
 import PL from '../../assets/img/PL.png';
 
 function Nav() {
@@ -12,6 +13,7 @@ function Nav() {
     { name: 'Home', link: '/', icon: <BiFootball style={{ display: 'inline' }} /> },
     { name: 'Results', link: '/results', icon: <MdEmojiEvents style={{ display: 'inline' }} /> },
     { name: 'Fixture', link: '/fixtures', icon: <RxTable style={{ display: 'inline' }} /> },
+    { name: 'Clubs', link: '/clubs', icon: <TbBuildingStadium style={{ display: 'inline' }} /> },
   ];
   const iconStyle = { fontSize: '30px', cursor: 'pointer' }
   return (
