@@ -14,6 +14,7 @@ function Nav() {
     { name: 'Results', link: '/results', icon: <MdEmojiEvents style={{ display: 'inline' }} /> },
     { name: 'Fixture', link: '/fixtures', icon: <RxTable style={{ display: 'inline' }} /> },
     { name: 'Clubs', link: '/clubs', icon: <TbBuildingStadium style={{ display: 'inline' }} /> },
+    { name: 'Table', link: '/table', icon: <TbBuildingStadium style={{ display: 'inline' }} /> },
   ];
   const iconStyle = { fontSize: '30px', cursor: 'pointer' }
   return (

@@ -3,10 +3,10 @@ const request = require('request-promise');
 const fs = require('fs')
 
 exports.handler = async () => {
-    const html = await request.get('https://www.premierleague.com/clubs');
-    fs.writeFileSync('test.html', html)
+    // const html = await request.get('https://www.premierleague.com/clubs');
+    // fs.writeFileSync('test.html', html)
 
-    // const html = fs.readFileSync('news.html');
+    const html = fs.readFileSync('clubs.html');
     const $ = cheerio.load(html);
     const clubs = $('.clubIndex ul.dataContainer li').map((i, club) => {
         return {
