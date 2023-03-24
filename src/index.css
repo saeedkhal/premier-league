@@ -30,11 +30,24 @@ code {
   /* override */
   overflow: hidden;
 }
-
+.after-popup::after{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  bottom: -5px;
+  right: 10px;
+  position: absolute;
+  transform: translateY(50%);
+  transform: translateX(-50%);
+  transform: rotate(45deg);
+  
+}
 
 
 .premierleage-img{
-  background: url('/public//imgs/global-sprite.png') ;
+  background: url('/public/imgs/global-sprite.png') ;
   width: 170px;
   height: 28px;
   background-position: -227px -366px;
