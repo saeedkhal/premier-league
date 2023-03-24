@@ -3,7 +3,7 @@ import Nav from './components/shared-components/Nav';
 import Home from './pages/Home';
 import Fixtures from './pages/Fixtures';
 import Results from './pages/Results';
-import Clubs from './pages/Clubs';
+import Clubs from './pages/Clubs.js';
 import { Route, Routes } from 'react-router-dom';
 
 function App(props) {

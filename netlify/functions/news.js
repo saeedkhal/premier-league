@@ -7,7 +7,7 @@ exports.handler = async () => {
         // const html = await request.get('https://www.premierleague.com/home');
         // fs.writeFileSync('test.html', html)
 
-        const html = fs.readFileSync('news.html')
+        const html = fs.readFileSync('news.html');
 
         const $ = cheerio.load(html);
         const mainNews = {
