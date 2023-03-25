@@ -42,8 +42,8 @@ function Clubs() {
     return (
         <>
             <Header title='Clubs' />
-            <div className='flex justify-center mt-3 max-w-md rounded-md m-auto bg-primary items-center text-white'>
-                <input onChange={(e) => handelSearch(e)} placeholder='Search' className='w-[90%]  p-3 bg-primary outline-0' />
+            <div className='flex justify-center mt-3 max-w-md rounded-md m-auto bg-primary items-center text-white w-[90%] p-2'>
+                <input onChange={(e) => handelSearch(e)} placeholder='Search' className='w-[90%]  bg-primary outline-0' />
                 <span className='bg-white text-clr-main text-2xl rounded-full p-1 cursor-pointer'>
                     <IoIosSearch />
                 </span>
