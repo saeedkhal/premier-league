@@ -5,13 +5,13 @@ exports.handler = async () => {
   try {
 
 
-    const html = await request.get('https://www.premierleague.com/tables');
-    fs.writeFileSync('test.html', html)
+    // const html = await request.get('https://www.premierleague.com/tables');
+    // fs.writeFileSync('test.html', html)
 
-    // const html = fs.readFileSync('test.html')
+    const html = fs.readFileSync('table.html')
     const $ = cheerio.load(html);
 
-    let tables = [];
+    let table = [];
     $('table').eq(0).find('tbody tr').not('.expandable').each((index, tr) => {
       // table col
       const position = $(tr).find('.pos .value').text().trim();
@@ -19,12 +19,13 @@ exports.handler = async () => {
       const teamLink = $(tr).find('.team a').attr('href');
       const teamAbb = $(tr).find('.team .short').text().trim();
       const teamName = $(tr).find('.team .long').text().trim();
+      const teamImg = $(tr).find('.team img.badge-image').attr('src');
       const played = $(tr).find('td').eq('3').text().trim();
       const won = $(tr).find('td').eq('4').text().trim();
       const drawn = $(tr).find('td').eq('5').text().trim();
       const lost = $(tr).find('td').eq('6').text().trim();
       const goalFor = $(tr).find('td').eq('7').text().trim();
-      const goalAgainines = $(tr).find('td').eq('8').text().trim();
+      const goalAgainst = $(tr).find('td').eq('8').text().trim();
       const goalDiffrence = $(tr).find('td').eq('9').text().trim();
       const points = $(tr).find('td.points').text().trim();
 
@@ -54,12 +55,12 @@ exports.handler = async () => {
       nextMatch.homeTeam = $(tr).find('td.nextMatchCol .tooltip-content .teamName abbr').first().attr('title');
       nextMatch.awayTeam = $(tr).find('td.nextMatchCol .tooltip-content .teamName abbr').last().attr('title');
 
-      tables.push({ position, movment, teamLink, teamAbb, teamName, played, won, drawn, lost, goalFor, goalAgainines, goalDiffrence, points, formAbb, nextMatch });
+      table.push({ position, movment, teamLink, teamAbb, teamName, teamImg, played, won, drawn, lost, goalFor, goalAgainst, goalDiffrence, points, formAbb, nextMatch });
 
     });
     return {
       statusCode: 200,
-      body: JSON.stringify({ res: tables }),
+      body: JSON.stringify({ table }),
       headers: {
         "Content-Type": "application/json"
       },
