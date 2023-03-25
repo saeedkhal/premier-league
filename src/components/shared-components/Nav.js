@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GoThreeBars } from 'react-icons/go';
 import { BiFootball } from 'react-icons/bi';
-import { MdEmojiEvents } from 'react-icons/md';
+import { MdEmojiEvents, MdOutlineMoreVert } from 'react-icons/md';
 import { RxTable, RxCross2 } from 'react-icons/rx';
 import { TbBuildingStadium } from 'react-icons/tb';
 import PL from '../../assets/img/PL.png';
+import { AiFillCaretDown } from 'react-icons/ai';
+import { BsTable } from 'react-icons/bs';
 
 function Nav() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const nav = [
     { name: 'Home', link: '/', icon: <BiFootball style={{ display: 'inline' }} /> },
-    { name: 'Results', link: '/results', icon: <MdEmojiEvents style={{ display: 'inline' }} /> },
-    { name: 'Fixture', link: '/fixtures', icon: <RxTable style={{ display: 'inline' }} /> },
+    { name: 'Table', link: '/table', icon: <BsTable style={{ display: 'inline' }} /> },
     { name: 'Clubs', link: '/clubs', icon: <TbBuildingStadium style={{ display: 'inline' }} /> },
-    { name: 'Table', link: '/table', icon: <TbBuildingStadium style={{ display: 'inline' }} /> },
+
+    {
+      name: 'More', link: '/more', icon: <MdOutlineMoreVert style={{ display: 'inline' }} />, submenu: [
+        { name: 'Results', link: '/results', icon: <MdEmojiEvents style={{ display: 'inline' }} /> },
+        { name: 'Fixture', link: '/fixtures', icon: <RxTable style={{ display: 'inline' }} /> },
+      ]
+    },
   ];
   const iconStyle = { fontSize: '30px', cursor: 'pointer' }
   return (
     <main className='z-10 sticky w-full top-0'>
       {/* mobile */}
-      <section className='p-2 bg-primary text-white flex justify-between items-center  text-xl xl:border-b-2 xl:border-secoundary'>
+      <section className=' bg-primary text-white flex justify-between items-center  text-xl xl:border-b-2 xl:border-secoundary'>
         <article className='flex items-center'>
           <span className='text-3xl pr-1 cursor-pointer w-20 mr-[-15px]'>
             <img src={PL} alt='img' />
@@ -32,18 +39,48 @@ function Nav() {
           </span>
         </article>
         <article className='hidden md:block'>
-          <ul className='list-none flex gap-4'>
+          <ul className='list-none flex gap-4 relative items-center'>
             {nav?.map((el, i) => {
               return (
                 <li
-                  key={i}
-                  className='text-lg'
+                  key={i} className='text-lg group py-4 cursor-pointer'
                 >
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? 'text-secoundary-light cursor-pointer' : 'text-white cursor-pointer'
+                      isActive ? 'text-secoundary-light cursor-pointer relative' : 'text-white cursor-pointer relative'
                     }
-                    to={el?.link}>{el?.name}</NavLink>
+                    to={el?.link}>
+                    <div className='flex items-center'>
+                      <span>
+                        {el?.name}
+                      </span>
+                      {
+                        el?.submenu?.length && <span className='text-xs'>
+                          <AiFillCaretDown />
+                        </span>
+                      }
+
+                    </div>
+                    {
+                      el?.submenu?.length ? <div className='absolute bg-secoundary left-[50%] top-[calc(100%+1rem)] translate-x-[-50%] nav-before scale-0 group-hover:scale-100 transition-[300]'>
+                        <div className='grid grid-cols-[1fr] py-2'>
+                          {
+                            el?.submenu?.map((el, i) => {
+                              return <Link key={i} to={el?.link} >
+                                <div className='px-8'>
+                                  <span className='hover:underline fort-bold text-sm text-white'>
+                                    {el?.name}
+                                  </span>
+                                </div>
+
+                              </Link>
+                            })
+                          }
+                        </div>
+                      </div> : ''
+                    }
+                  </NavLink>
+
                 </li>
               );
             })}

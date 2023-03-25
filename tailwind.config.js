@@ -21,5 +21,7 @@ module.exports = {
       'neutral': '#07EDBD'
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-scoped-groups"),
+  ],
 };
