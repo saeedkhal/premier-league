@@ -41,12 +41,12 @@ function LatestVideos() {
                             latestVideosSecoundary?.map(el => {
                                 return <a href='/' className='group'>
                                     <div className='flex gap-3 mt-2 md:mt-0 md:block items-center'>
-                                        <div className='max-w-[50%] relative text-white md:max-w-[100%] min-w-[240px]'>
+                                        <div className='max-w-[50%] relative text-white md:max-w-[100%] min-w-[200px]'>
                                             <img className='w-full' src={el?.img.replace(/\?.+/, '?width=320&height=180')} alt='' />
                                             <VideoPlay time={el?.runTime} />
                                         </div>
                                         <div>
-                                            <h1 className='text-xl font-light text-clr-main mt-3 md:mt-2 group-hover:underline'>
+                                            <h1 className='text-md xl:text-xl font-light text-clr-main mt-3 md:mt-2 group-hover:underline'>
                                                 {el?.title}
                                             </h1>
                                         </div>
