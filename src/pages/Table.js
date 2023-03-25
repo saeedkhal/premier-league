@@ -1,6 +1,10 @@
 import React from 'react';
 import Header from '../components/shared-components/Header'
 import { BsArrowRight } from 'react-icons/bs'
+import FooterSponsor from '../components/shared-components/FooterSponsor';
+
+
+
 
 function Table() {
     const colors = {
@@ -12,7 +16,7 @@ function Table() {
         <div>
             <Header title='Table' />
             <div className='premierleage-img mt-6 mb-4 mx-auto' />
-            <table className='w-[99%] xl:w-[80%] text-center text-clr-main mt-1 mx-auto mb-4'>
+            <table className='w-[85%]  text-center text-clr-main mt-1 mx-auto mb-4'>
                 <thead>
                     <tr className='bg-clr-main bg-opacity-10 xl:[&>*]:px-6'>
                         <th>pos</th>
@@ -34,7 +38,7 @@ function Table() {
                         [1, 2].map((e, i) => {
                             return <tr key={i} className='border-b font-light h-10 relative border-b-black/[.1] [&>*]:font-light'>
                                 <td className='font-light'>1</td>
-                                <td className='flex items-center gap-2 font-light h-10 xk:px-6'>
+                                <td className='flex items-center gap-2 font-light h-10 xl:px-6'>
                                     <img className='w-[25px]' src='https://resources.premierleague.com/premierleague/badges/25/t3@x2.png' alt='g' />
                                     Ars
                                 </td>
@@ -53,16 +57,18 @@ function Table() {
                                             ['W', 'L', 'D', 'W', 'W'].map((el, i) => {
                                                 return <div style={{ background: colors[el] }} className='group cursor-pointer rounded-full w-8 h-8 flex items-center justify-center'>
                                                     <span className='font-bold'>{el}</span>
-                                                    <div className='bg-white absolute shadow-[0_2px_8px_rgba(0,0,0,0.25)] top-[-60px] translate-x-[-85px] hidden group-hover:block text-primary-dark p-2 after-popup min-w-[210px]'>
-                                                        <section className='flex justify-between items-center mb-1'>
-                                                            <article className='mr-3'>Saturday 25 February 2023</article>
-                                                            <article>
-                                                                <BsArrowRight />
+                                                    <div className='bg-white absolute shadow-[0_2px_8px_rgba(0,0,0,0.25)] top-[-60px] translate-x-[-75px] hidden group-hover:block text-primary-dark p-2 pr-4 after-popup min-w-[190px]'>
+                                                        <section className='text-center mb-2 text-xs'>
+                                                            <article className='text-black/50 relative'>
+                                                                Saturday 25 February 2023
+                                                                <span className='absolute top-0 right-[-10px]'>
+                                                                    <BsArrowRight />
+                                                                </span>
                                                             </article>
                                                         </section>
                                                         <section className='flex justify-center gap-1'>
                                                             <article className='flex items-center gap-1'>
-                                                                <span>LEI</span>
+                                                                <span className='font-bold'>LEI</span>
                                                                 <span><img className='w-[20px]' src='https://resources.premierleague.com/premierleague/badges/20/t13@x2.png' alt='img' /></span>
                                                             </article>
                                                             <article className='bg-primary text-white px-2'>
@@ -70,7 +76,7 @@ function Table() {
                                                             </article>
                                                             <article className='flex items-center gap-1'>
                                                                 <span><img className='w-[20px]' src='https://resources.premierleague.com/premierleague/badges/20/t3@x2.png' alt='img' /></span>
-                                                                <span>LEI</span>
+                                                                <span className='font-bold'>LEI</span>
                                                             </article>
 
                                                         </section>
@@ -83,8 +89,32 @@ function Table() {
                                 </td>
                                 <td className='hidden xl:table-cell'>
                                     <a href='/'>
-                                        <div className='border border-black border-opacity-10 rounded-full w-7 h-7 p-1 m-auto'>
+                                        <div className='group border border-black border-opacity-10 rounded-full w-7 h-7 p-1 m-auto'>
                                             <img alt='img' src='https://resources.premierleague.com/premierleague/badges/20/t2@x2.png' />
+                                            <div className='bg-white absolute shadow-[0_2px_8px_rgba(0,0,0,0.25)] top-[-60px] translate-x-[-160px] hidden group-hover:block text-primary-dark p-2 pr-4 after-popup min-w-[190px]'>
+                                                <section className='text-center mb-2 text-xs'>
+                                                    <article className='text-black/50 relative'>
+                                                        Saturday 25 February 2023
+                                                        <span className='absolute top-0 right-[-10px]'>
+                                                            <BsArrowRight />
+                                                        </span>
+                                                    </article>
+                                                </section>
+                                                <section className='flex justify-center gap-1'>
+                                                    <article className='flex items-center gap-1'>
+                                                        <span className='font-bold'>LEI</span>
+                                                        <span><img className='w-[20px]' src='https://resources.premierleague.com/premierleague/badges/20/t13@x2.png' alt='img' /></span>
+                                                    </article>
+                                                    <article className='px-2 border border-black/5'>
+                                                        2-1
+                                                    </article>
+                                                    <article className='flex items-center gap-1'>
+                                                        <span><img className='w-[20px]' src='https://resources.premierleague.com/premierleague/badges/20/t3@x2.png' alt='img' /></span>
+                                                        <span className='font-bold'>LEI</span>
+                                                    </article>
+
+                                                </section>
+                                            </div>
                                         </div>
                                     </a>
                                 </td>
@@ -94,6 +124,7 @@ function Table() {
 
                 </tbody>
             </table>
+            <FooterSponsor />
         </div>
     );
 }
