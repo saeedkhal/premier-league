@@ -24,6 +24,11 @@ exports.handler = async () => {
                         homeAbb: $(match).find('.teamName .abbr').first().text().trim(),
                         awayTeam: $(match).find('.teamName .shortname').last().text().trim(),
                         awayAbb: $(match).find('.teamName .abbr').last().text().trim(),
+                        score: $(match).find('.score').last().text().trim(),
+                        homeTeamImg:$(match).find('.badge-image-container img').first().attr('src'),  
+                        awarTeamImg:$(match).find('.badge-image-container img').first().attr('src'),
+                        stadiumName:$(match).find('.stadiumName').text().trim(),
+                          
                     }
                 }).get()
             };
