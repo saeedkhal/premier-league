@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { GoThreeBars } from 'react-icons/go';
 import { BiFootball } from 'react-icons/bi';
-import { MdEmojiEvents, MdOutlineMoreVert } from 'react-icons/md';
+import { MdEmojiEvents, MdExpandMore, MdOutlineMoreVert } from 'react-icons/md';
 import { RxTable, RxCross2 } from 'react-icons/rx';
 import { TbBuildingStadium } from 'react-icons/tb';
 import PL from '../../assets/img/PL.png';
@@ -11,6 +11,7 @@ import { BsTable } from 'react-icons/bs';
 
 function Nav() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [drowpDownOpen, setDropDownOpen] = useState(false);
   const nav = [
     { name: 'Home', link: '/', icon: <BiFootball style={{ display: 'inline' }} /> },
     { name: 'Table', link: '/table', icon: <BsTable style={{ display: 'inline' }} /> },
@@ -102,21 +103,52 @@ function Nav() {
         <ul className='list-none'>
           {nav?.map((el, i) => {
             return (
-              <li
-                onClick={() => setSideBarOpen(false)}
-                key={i}
-                className={`text-clr-dark hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
-              >
-                <NavLink to={el?.link} className={`w-full border-t-2  p-3 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'} hover:pl-6 duration-300`}>
-                  {el?.icon} {el.name}
-                </NavLink>
-              </li>
+              <>
+                <li
+                  onClick={() => {
+                    el?.submenu?.length ? setDropDownOpen(!drowpDownOpen) : setSideBarOpen(false);
+                  }}
+                  key={i}
+                  className={`text-clr-dark hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
+                >
+                  {
+                    el?.submenu?.length ? <div className={`w-full border-t-2  p-3 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'}`}>
+                      <div className='flex items-center justify-between'>
+                        <span>
+                          {el?.icon} {el.name}
+                        </span>
+                        <span>
+                          <MdExpandMore />
+                        </span>
+                      </div>
+                    </div> :
+                      <NavLink to={el?.link} className={`w-full border-t-2  p-3 ${i === 0 ? 'border-t-secoundary' : 'border-t-primary'} hover:pl-6 duration-300`}>
+                        {el?.icon} {el.name}
+                      </NavLink>
+                  }
+
+                </li>
+                {
+                  el?.submenu?.map((el, i) => {
+                    return <li
+                      onClick={() => setSideBarOpen(false)}
+                      key={i}
+                      className={`${drowpDownOpen ? 'hidden' : 'block'} text-clr-dark hover:text-clr-light text-md cursor-pointer border-b-2border-b-primary-dark bg-primary-light  flex gap-2 items-center`}
+                    >
+                      <NavLink to={el?.link} className={`w-full border-t-2  p-3 border-t-primary hover:pl-6 duration-300`}>
+                        {el?.icon} {el.name}
+                      </NavLink>
+                    </li>
+                  })
+                }
+              </>
+
             );
           })}
         </ul>
       </section>
       {/* end mobile */}
-    </main>
+    </main >
   );
 }
 
