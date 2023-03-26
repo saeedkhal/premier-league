@@ -24,6 +24,7 @@ function Nav() {
       ]
     },
   ];
+  console.log(window.location.pathname)
   const iconStyle = { fontSize: '30px', cursor: 'pointer' }
   return (
     <main className='z-10 sticky w-full top-0'>
@@ -48,9 +49,10 @@ function Nav() {
                 >
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? 'text-secoundary-light cursor-pointer relative' : 'text-white cursor-pointer relative'
-                    }
-                    to={el?.link}>
+                      isActive ? 'text-secoundary-light cursor-pointer relative' : 'text-white cursor-pointer relative'}
+                    to={el?.link} 
+                    onClick={(event)=> el?.link ==='/more' ? event.preventDefault() : ''}
+                    >
                     <div className='flex items-center'>
                       <span>
                         {el?.name}
@@ -60,7 +62,6 @@ function Nav() {
                           <AiFillCaretDown />
                         </span>
                       }
-
                     </div>
                     {
                       el?.submenu?.length ? <div className='absolute bg-secoundary left-[50%] top-[calc(100%+1rem)] translate-x-[-50%] nav-before scale-0 group-hover:scale-100 transition-[300]'>
