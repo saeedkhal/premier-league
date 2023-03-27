@@ -4,9 +4,10 @@ import Header from '../components/shared-components/Header';
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReults } from '../features/results/resultsSlice';
+import Loading from '../components/shared-components/loading';
 
 function Results() {
-  const { data } = useSelector(state => state?.results);
+  const { data , loading } = useSelector(state => state?.results);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,8 +17,7 @@ function Results() {
 
   return <main className='xl:w-[70%] m-auto'>
     <Header title='Results' />
-
-    {data?.results?.map((ResultItem) => {
+    {loading ? <Loading /> : data?.results?.map((ResultItem) => {
       return <div key={ResultItem?.date}>
               <section className='m-3'>
                 <article className='flex justify-between items-center'>
@@ -78,6 +78,7 @@ function Results() {
         }
     </div>
     })}
+  
 
     <FooterSponsor />
   </main>

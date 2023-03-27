@@ -4,29 +4,29 @@ const fs = require('fs');
 exports.handler = async () => {
     try {
 
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto('https://www.premierleague.com/fixtures');
-        await page.waitForSelector('.matchList .matchFixtureContainer');
-        const html = await page.content();
-        fs.writeFileSync('fixture.html', html);
+        // const browser = await puppeteer.launch();
+        // const page = await browser.newPage();
+        // await page.goto('https://www.premierleague.com/fixtures');
+        // await page.waitForSelector('.matchList .matchFixtureContainer');
+        // const html = await page.content();
+        // fs.writeFileSync('fixture.html', html);
         
-        // const html = fs.readFileSync('result.html')
+        const html = fs.readFileSync('fixture.html')
 
         const $ = cheerio.load(html);
 
-        const results = $('.fixtures__matches-list').map((i, el) => {
+        const fixture = $('.fixtures__matches-list').map((i, el) => {
             return {
                 date: $(el).attr('data-competition-matches-list'),
-                marches: $(el).find('ul li').map((index, match) => {
+                matches: $(el).find('ul li').map((index, match) => {
                     return {
                         homeTeam: $(match).find('.teamName .shortname').first().text().trim(),
                         homeAbb: $(match).find('.teamName .abbr').first().text().trim(),
                         awayTeam: $(match).find('.teamName .shortname').last().text().trim(),
                         awayAbb: $(match).find('.teamName .abbr').last().text().trim(),
-                        score: $(match).find('time').text().trim(),
+                        time: $(match).find('time').text().trim(),
                         homeTeamImg:$(match).find('.badge-image-container img').first().attr('src'),  
-                        awarTeamImg:$(match).find('.badge-image-container img').first().attr('src'),
+                        awayTeamImg:$(match).find('.badge-image-container img').first().attr('src'),
                         stadiumName:$(match).find('.stadiumName').text().trim(),
                           
                     }
@@ -35,7 +35,7 @@ exports.handler = async () => {
         }).get();
         return {
             statusCode: 200,
-            body: JSON.stringify({ results }),
+            body: JSON.stringify({ fixture }),
             headers: {
                 "Content-Type": "application/json"
             },
