@@ -17,7 +17,7 @@ function Clubs() {
         if (!searchValue) {
             setClubs(data.clubs)
         } else {
-            setClubs((oldClcbs) => {
+            setClubs(() => {
                 return data?.clubs?.filter(club => club?.clubName.toLowerCase().startsWith(searchValue))
             })
         }
@@ -76,22 +76,22 @@ function Clubs() {
                                 }
                             </div>
                             {
-                                <main className='hidden lg:grid grid-cols-3 xl:grid-cols-5 mt-[3rem] max-w-2xl xl:max-w-[90%] m-auto gap-x-4 mb-5'>
+                                <main className='hidden lg:grid grid-cols-3 xl:grid-cols-5 mt-[3rem] max-w-2xl xl:max-w-[90%] m-auto gap-4 mb-5'>
                                     {
                                         clubs?.map((club, i) => {
                                             return <a href={club?.clubLink}>
-                                                <article style={bg(i)} className='text-white text-center bg-no-repeat bg-cover bg-no-repeat'>
+                                                <article style={bg(i)} className='text-white group text-center bg-no-repeat bg-cover'>
                                                     <section className='h-[8rem] relative'>
-                                                        <div className='rounded-full bg-white inline-block p-3 top-[50%] left-1/2 absolute translate-x-[-50%] translate-y-[-20%] '>
+                                                        <div className='rounded-full bg-white inline-block p-3 top-[50%] left-1/2 absolute translate-x-[-50%] translate-y-[-15%] '>
                                                             <img src={club?.clubImg} alt='img' />
                                                         </div>
                                                     </section>
-                                                    <section className='bg-primary h-[8rem]'>
+                                                    <section className='bg-primary h-[9rem]'>
                                                         <h1 className='font-bold text-lg pt-8'>{club?.clubName}</h1>
                                                         <p className='font-light text-sm opacity-50'>{club?.stadiumName}</p>
-                                                        <a href='/' className='flex items-center justify-center text-xs group gap-3 hover:underline mt-4'>
+                                                        <a href='/' className='flex group-hover:text-secoundary items-center justify-center text-xs  gap-3 hover:underline mt-4'>
                                                             <span className=''>Club Profile</span>
-                                                            <span className='group-hover:translate-x-2 transition-[300]'>
+                                                            <span className='group-hover:translate-x-2  transition-[300]'>
                                                                 <AiOutlineArrowRight />
                                                             </span>
                                                         </a>

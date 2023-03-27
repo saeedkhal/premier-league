@@ -4,6 +4,7 @@ import cardsReducer from './features/cards/cardsSlice';
 import newsSlice from './features/news/newsSlice';
 import clubsSlice from './features/clubs/clubsSlice';
 import tableSlice from './features/table/tableSlice';
+import resultsSlice from './features/results/resultsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     cards: cardsReducer,
     news: newsSlice,
     clubs: clubsSlice,
-    table: tableSlice
+    table: tableSlice,
+    results: resultsSlice
   },
 });

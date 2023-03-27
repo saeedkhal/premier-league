@@ -59,6 +59,22 @@ code {
   position: absolute;
   transform: translateX(50%) rotate(45deg);  
 }
+.competitionImage1 {
+    content: "";
+    background: url('/public/imgs/pl-logo-sprite.png') -376px -205px no-repeat;
+    width: 24px;
+    height: 30px;
+    transform: scale(1);
+    right: 0;
+    top: -7px;
+}
+.stadium-b{
+  width: 23px;
+  height: 14px;
+  background-position: -728px -552px;
+  background-image: url('/public/imgs/global-sprite.png') ;
+  display: block;
+}
 
 .premierleage-img{
   background: url('/public/imgs/global-sprite.png') ;
