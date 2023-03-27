@@ -18,7 +18,7 @@ exports.handler = async () => {
         const results = $('.fixtures__matches-list').map((i, el) => {
             return {
                 date: $(el).attr('data-competition-matches-list'),
-                marches: $(el).find('ul li').map((index, match) => {
+                matches: $(el).find('ul li').map((index, match) => {
                     return {
                         homeTeam: $(match).find('.teamName .shortname').first().text().trim(),
                         homeAbb: $(match).find('.teamName .abbr').first().text().trim(),
@@ -26,7 +26,7 @@ exports.handler = async () => {
                         awayAbb: $(match).find('.teamName .abbr').last().text().trim(),
                         score: $(match).find('.score').text().trim(),
                         homeTeamImg:$(match).find('.badge-image-container img').first().attr('src'),  
-                        awarTeamImg:$(match).find('.badge-image-container img').first().attr('src'),
+                        awayTeamImg:$(match).find('.badge-image-container img').last().attr('src'),
                         stadiumName:$(match).find('.stadiumName').text().trim(),
                           
                     }
