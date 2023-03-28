@@ -5,6 +5,8 @@ import { BiFootball } from 'react-icons/bi';
 import { MdEmojiEvents, MdExpandMore, MdOutlineMoreVert } from 'react-icons/md';
 import { RxTable, RxCross2 } from 'react-icons/rx';
 import { TbBuildingStadium } from 'react-icons/tb';
+import { GiBabyfootPlayers } from 'react-icons/gi';
+
 import PL from '../../assets/img/PL.png';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { BsTable } from 'react-icons/bs';
@@ -21,6 +23,7 @@ function Nav() {
       name: 'More', link: '/more', icon: <MdOutlineMoreVert style={{ display: 'inline' }} />, submenu: [
         { name: 'Results', link: '/results', icon: <MdEmojiEvents style={{ display: 'inline' }} /> },
         { name: 'Fixture', link: '/fixtures', icon: <RxTable style={{ display: 'inline' }} /> },
+        { name: 'Players', link: '/players', icon: <GiBabyfootPlayers style={{ display: 'inline' }} /> },
       ]
     },
   ];

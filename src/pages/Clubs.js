@@ -48,6 +48,8 @@ function Clubs() {
                     <IoIosSearch />
                 </span>
             </div>
+            <div className='premierleage-img mt-6 mb-4 mx-auto' />
+
             {
                 loading || searchLoading
                     ? <Loading />

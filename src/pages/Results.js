@@ -34,7 +34,7 @@ function Results() {
           ResultItem?.matches?.map((match,i) =>{
             return    <section>
             <article>
-              <a href='/' className='group relative flex justify-center items-center gap-3 p-3 border-y border-y-black/10 my-2 xl:grid grid-cols-3'>
+              <a href='/' className='group relative flex justify-center items-center gap-3 p-3 border-y border-y-black/10 my-2 xl:grid grid-cols-[1.5fr_1.2fr_1fr]'>
                 <div className='grid grid-cols-[1fr_auto_1fr] gap-2'>
                   <section className='flex gap-2 justify-end'>
                     <span className='font-bold'>{match?.homeTeam}</span>

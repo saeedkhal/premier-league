@@ -26,7 +26,7 @@ exports.handler = async () => {
                         awayAbb: $(match).find('.teamName .abbr').last().text().trim(),
                         time: $(match).find('time').text().trim(),
                         homeTeamImg:$(match).find('.badge-image-container img').first().attr('src'),  
-                        awayTeamImg:$(match).find('.badge-image-container img').first().attr('src'),
+                        awayTeamImg:$(match).find('.badge-image-container img').last().attr('src'),
                         stadiumName:$(match).find('.stadiumName').text().trim(),
                           
                     }
