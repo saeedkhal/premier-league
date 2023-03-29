@@ -7,17 +7,20 @@ import Loading from '../components/shared-components/loading';
 import { IoIosSearch } from 'react-icons/io';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
+const step = 20;
 function Table() {
   const dispatch = useDispatch();
   const [searchLoading, setSearchLoading] = useState(false);
   const { data, loading } = useSelector((state) => state?.players);
   const [players, setPlayers] = useState([]);
-
+  const [size, setSize] = useState(players.length);
+  const [hasMore, setHasMore] = useState(true);
   const fetchMoreData = () => {
+    setSize(players.length + step);
     setTimeout(() => {
       const remainingPlayers = data?.players?.slice(
-        Math.ceil(players / 20) + 1,
-        20
+        players.length,
+        players.length + step
       );
       const newPlayers = [...players, ...remainingPlayers];
       setPlayers(newPlayers);
@@ -25,15 +28,17 @@ function Table() {
   };
   const handelGetPlayesr = async () => {
     const res = await dispatch(fetchPlayer());
-    setPlayers(res?.payload?.players.slice(0, 20));
+    setPlayers(res?.payload?.players.slice(0, step));
   };
 
   const handelSearch = (e) => {
     setSearchLoading(true);
     const searchValue = e.target.value.trim().toLowerCase();
     if (!searchValue) {
-      setPlayers(data?.players);
+      setPlayers(data?.players.slice(0, size));
+      setHasMore(true);
     } else {
+      setHasMore(false);
       setPlayers(() => {
         return data?.players?.filter((player) =>
           player?.name?.toLowerCase().startsWith(searchValue)
@@ -67,7 +72,7 @@ function Table() {
         <InfiniteScroll
           dataLength={players?.length}
           next={fetchMoreData}
-          hasMore={true}
+          hasMore={hasMore}
           loader={
             <>
               <div className='text-center'>loading</div>
