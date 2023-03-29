@@ -9,7 +9,7 @@ exports.handler = async () => {
         await page.goto('https://www.premierleague.com/results');
         await page.waitForSelector('.matchList .matchFixtureContainer');
         const html = await page.content();
-        fs.writeFileSync('result.html', html);
+        // fs.writeFileSync('result.html', html);
         
         // const html = fs.readFileSync('result.html')
 
