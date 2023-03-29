@@ -31,7 +31,10 @@ exports.handler = async () => {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify('internal server error')
+      body: JSON.stringify({
+        status: 500,
+        message: err
+      })
     }
   }
 

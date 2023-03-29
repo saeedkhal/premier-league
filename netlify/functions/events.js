@@ -68,7 +68,7 @@ exports.handler = async () => {
       statusCode: 500,
       body: JSON.stringify({
         status: 500,
-        message: 'Internal Server Error'
+        message: err
       })
     }
   }

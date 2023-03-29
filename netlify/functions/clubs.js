@@ -28,10 +28,10 @@ exports.handler = async () => {
                 "Content-Type": "application/json"
             },
         }
-    } catch {
+    } catch(e) {
         return {
             statusCode: 500,
-            body: JSON.stringify('internal server error')
+            body: JSON.stringify(e)
         }
     }
 }

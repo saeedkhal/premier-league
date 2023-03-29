@@ -40,12 +40,13 @@ exports.handler = async () => {
                 "Content-Type": "application/json"
             },
         }
-    } catch (err) {
-        console.log(err)
+    }catch (err) {
         return {
-            statusCode: 500,
-            body: JSON.stringify('internal server error')
+          statusCode: 500,
+          body: JSON.stringify({
+            status: 500,
+            message: err
+          })
         }
-    }
-
+      }
 }
