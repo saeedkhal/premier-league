@@ -4,14 +4,14 @@ const fs = require('fs');
 exports.handler = async () => {
     try {
 
-        // const browser = await puppeteer.launch();
-        // const page = await browser.newPage();
-        // await page.goto('https://www.premierleague.com/fixtures');
-        // await page.waitForSelector('.matchList .matchFixtureContainer');
-        // const html = await page.content();
-        // fs.writeFileSync('fixture.html', html);
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto('https://www.premierleague.com/fixtures');
+        await page.waitForSelector('.matchList .matchFixtureContainer');
+        const html = await page.content();
+        fs.writeFileSync('fixture.html', html);
         
-        const html = fs.readFileSync('fixture.html')
+        // const html = fs.readFileSync('fixture.html')
 
         const $ = cheerio.load(html);
 
@@ -41,13 +41,13 @@ exports.handler = async () => {
             },
         }
     } catch (err) {
-        return {
-          statusCode: 500,
-          body: JSON.stringify({
-            status: 500,
-            message: err
-          })
-        }
-      }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        status: 500,
+        message: err
+      })
+    }
+  }
 
 }

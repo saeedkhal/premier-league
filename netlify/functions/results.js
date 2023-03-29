@@ -4,14 +4,14 @@ const fs = require('fs');
 exports.handler = async () => {
     try {
 
-        // const browser = await puppeteer.launch();
-        // const page = await browser.newPage();
-        // await page.goto('https://www.premierleague.com/results');
-        // await page.waitForSelector('.matchList .matchFixtureContainer');
-        // const html = await page.content();
-        // fs.writeFileSync('result.html', html);
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto('https://www.premierleague.com/results');
+        await page.waitForSelector('.matchList .matchFixtureContainer');
+        const html = await page.content();
+        fs.writeFileSync('result.html', html);
         
-        const html = fs.readFileSync('result.html')
+        // const html = fs.readFileSync('result.html')
 
         const $ = cheerio.load(html);
 

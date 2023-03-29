@@ -5,10 +5,10 @@ exports.handler = async () => {
   try {
 
 
-    // const html = await request.get('https://www.premierleague.com/tables');
+    const html = await request.get('https://www.premierleague.com/tables');
     // fs.writeFileSync('test.html', html)
 
-    const html = fs.readFileSync('table.html')
+    // const html = fs.readFileSync('table.html')
     const $ = cheerio.load(html);
 
     let table = [];

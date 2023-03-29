@@ -5,7 +5,7 @@ exports.handler = async () => {
   try {
 
     const html = await request.get('https://www.premierleague.com/tables');
-    fs.writeFileSync('test.html', html)
+    // fs.writeFileSync('test.html', html)
 
     // const html = fs.readFileSync('test.html')
 
