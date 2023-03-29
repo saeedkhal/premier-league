@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/shared-components/Header';
-import { BsArrowRight, BsCircleFill } from 'react-icons/bs';
 import FooterSponsor from '../components/shared-components/FooterSponsor';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPlayer } from '../features/players/playersSlice';
-import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 import Loading from '../components/shared-components/loading';
 import { IoIosSearch } from 'react-icons/io';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 function Table() {
   const dispatch = useDispatch();
   const [searchLoading, setSearchLoading] = useState(false);
   const { data, loading } = useSelector((state) => state?.players);
-  const [players, setPlayers] = useState(data?.players);
+  const [players, setPlayers] = useState([]);
 
+  const fetchMoreData = () => {
+    setTimeout(() => {
+      const remainingPlayers = data?.players?.slice(
+        Math.ceil(players / 20) + 1,
+        20
+      );
+      const newPlayers = [...players, ...remainingPlayers];
+      setPlayers(newPlayers);
+    }, [1000]);
+  };
   const handelGetPlayesr = async () => {
     const res = await dispatch(fetchPlayer());
-    setPlayers(res?.payload?.players);
+    setPlayers(res?.payload?.players.slice(0, 20));
   };
 
   const handelSearch = (e) => {
@@ -55,44 +64,56 @@ function Table() {
       {loading || searchLoading ? (
         <Loading />
       ) : (
-        <table className='w-full text-clr-main mt-1 mx-auto mb-4 text-center xl:text-start'>
-          <thead>
-            <tr className='bg-clr-main bg-opacity-10 xl:[&>*]:px-6 h-10 text-xs'>
-              <th className='text-start xl:w-[60%] px-2 xl:px-0'>Player</th>
-              <th className='xl:text-start xl:w-[20%]'>Position</th>
-              <th className='xl:text-start xl:w-[20%]'>Nationality</th>
-            </tr>
-          </thead>
-          <tbody className='font-light text-black text-sm'>
-            {players?.slice(1,5)?.map((player) => {
-              return (
-                <tr className='border-b border-b-black/10 font-bold xl:[&>*]:px-6'>
-                  <td>
-                    <a href='/' className='group'>
-                      <div className='flex items-center gap-2'>
-                        <span>
-                          <img width='50px' src={player?.img} alt='pImg' />
-                        </span>
-                        <span className='group-hover:underline'>
-                          {player?.name}
+        <InfiniteScroll
+          dataLength={players?.length}
+          next={fetchMoreData}
+          hasMore={true}
+          loader={
+            <>
+              <div className='text-center'>loading</div>
+              <div className='infinit-scroll-loading'></div>
+            </>
+          }
+        >
+          <table className='w-full text-clr-main mt-1 mx-auto mb-4 text-center xl:text-start'>
+            <thead>
+              <tr className='bg-clr-main bg-opacity-10 xl:[&>*]:px-6 h-10 text-xs'>
+                <th className='text-start xl:w-[60%] px-2 xl:px-0'>Player</th>
+                <th className='xl:text-start xl:w-[20%]'>Position</th>
+                <th className='xl:text-start xl:w-[20%]'>Nationality</th>
+              </tr>
+            </thead>
+            <tbody className='font-light text-black text-sm'>
+              {players?.map((player) => {
+                return (
+                  <tr className='border-b border-b-black/10 font-bold xl:[&>*]:px-6'>
+                    <td>
+                      <a href='/' className='group'>
+                        <div className='flex items-center gap-2'>
+                          <span>
+                            <img width='50px' src={player?.img} alt='pImg' />
+                          </span>
+                          <span className='group-hover:underline'>
+                            {player?.name}
+                          </span>
+                        </div>
+                      </a>
+                    </td>
+                    <td>{player?.position}</td>
+                    <td>
+                      <div className='flex items-center gap-2 justify-center xl:justify-start'>
+                        <span className={`${player?.nationalityImg}`}></span>
+                        <span className='hidden xl:block'>
+                          {player?.nationality}
                         </span>
                       </div>
-                    </a>
-                  </td>
-                  <td>{player?.position}</td>
-                  <td>
-                    <div className='flex items-center gap-2 justify-center xl:justify-start'>
-                      <span className={`${player?.nationalityImg}`}></span>
-                      <span className='hidden xl:block'>
-                        {player?.nationality}
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </InfiniteScroll>
       )}
       <FooterSponsor />
     </div>
