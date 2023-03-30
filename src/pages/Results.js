@@ -3,21 +3,19 @@ import FooterSponsor from '../components/shared-components/FooterSponsor';
 import Header from '../components/shared-components/Header';
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReults } from '../features/results/resultsSlice';
+// import { fetchReults } from '../features/results/resultsSlice';
 import Loading from '../components/shared-components/loading';
-
+import results from '../assets/data/results';
 function Results() {
   const { data , loading } = useSelector(state => state?.results);
-
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchReults());
+    // dispatch(fetchReults());
   }, []);
-
-
+  
   return <main className='xl:w-[70%] m-auto'>
     <Header title='Results' />
-    {loading ? <Loading /> : data?.results?.map((ResultItem) => {
+    {loading ? <Loading /> : results?.map((ResultItem) => {
       return <div key={ResultItem?.date}>
               <section className='m-3'>
                 <article className='flex justify-between items-center'>

@@ -3,21 +3,21 @@ import FooterSponsor from '../components/shared-components/FooterSponsor';
 import Header from '../components/shared-components/Header';
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFixture } from '../features/fixture/fixtureSlice';
+// import { fetchFixture } from '../features/fixture/fixtureSlice';
 import Loading from '../components/shared-components/loading';
-
+import fixture from '../assets/data/fixture';
 function Fixtures() {
   const { data , loading } = useSelector(state => state?.fixture);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchFixture());
+    // dispatch(fetchFixture());
   }, []);
 
 
   return <main className='xl:w-[70%] m-auto'>
     <Header title='' />
-    {loading ? <Loading /> : data?.fixture?.map((ResultItem) => {
+    {loading ? <Loading /> : fixture?.map((ResultItem) => {
       return <div key={ResultItem?.date}>
               <section className='m-3'>
                 <article className='flex justify-between items-center'>
