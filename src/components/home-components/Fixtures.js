@@ -2,19 +2,19 @@ import React, { useEffect } from 'react';
 import { SiPremierleague } from 'react-icons/si'
 import BIN from '../../assets/img/BIN.png';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchEvents } from '../../features/events/eventsSlice';
+import {  useSelector } from 'react-redux';
+// import { fetchEvents } from '../../features/events/eventsSlice';
 import moment from 'moment';
 import Loading from '../shared-components/loading';
-
+import matches from '../../assets/data/matches';
 
 function Fixtures() {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const { data, loading } = useSelector(state => state?.events);
 
     useEffect(() => {
-        dispatch(fetchEvents());
+        // dispatch(fetchEvents());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
@@ -29,7 +29,7 @@ function Fixtures() {
                 <p className='font-light text-clr-main text-sm'>All times shown are your <span className='font-bold'>local time</span> </p>
             </section>
             {
-                loading ? <Loading /> : data?.matches?.map(match => {
+                loading ? <Loading /> : matches?.map(match => {
                     return <div key={match?.time}>
                         <section className='text-center mt-10'>
                             <span className='font-bold'>
