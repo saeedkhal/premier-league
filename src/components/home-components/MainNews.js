@@ -20,13 +20,13 @@ function MainNews() {
             <main className='relative z-[-1]'>
                 <section className='mb-5 md:flex md:gap-10'>
                     <article className='relative md:w-full'>
-                        <img className='w-full md:h-full object-cover' src={mainNews?.mainNewImg} alt='MI' />
+                        <img className='w-full min-w-[400px] md:h-full object-cover' src={mainNews?.mainNewImg} alt='MI' />
                         {/* <span className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-white text-6xl'>
                             <FaPlay />
                         </span> */}
                     </article>
                     <article className='px-3 text-white'>
-                        <h1 className='text-3xl mt-5 font-bold mb-5 md:text-5xl lg:text-6xl'>{mainNews?.title}</h1>
+                        <h1 className='text-xl mt-5 font-bold mb-5 md:text-3xl lg:text-3xl'>{mainNews?.title}</h1>
                         <p className='md:text-md lg:text-xl font-light'>{mainNews?.text}</p>
                         <div className='hidden lg:block '>
                             <p className='mt-5 font-bold lg:mb-4 md:mt-8'>Realted Content</p>

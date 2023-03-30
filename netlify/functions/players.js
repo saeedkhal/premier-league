@@ -4,10 +4,10 @@ const fs = require('fs');
 exports.handler = async () => {
   try {
 
-    const html = await request.get('https://www.premierleague.com/tables');
+    // const html = await request.get('https://www.premierleague.com/players');
     // fs.writeFileSync('test.html', html)
 
-    // const html = fs.readFileSync('players.html')
+    const html = fs.readFileSync('players.html')
 
     const $ = cheerio.load(html);
 
