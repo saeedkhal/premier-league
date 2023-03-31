@@ -13,7 +13,7 @@ function Clubs() {
     const [searchLoading, setSearchLoading] = useState(false);
     const handelSearch = (e) => {
         setSearchLoading(true);
-        const searchValue = e.target.value.trim().toLowerCase();
+        const searchValue = e.target.value.trim().toLowerCase()
         if (!searchValue) {
             setClubs(data.clubs)
         } else {
