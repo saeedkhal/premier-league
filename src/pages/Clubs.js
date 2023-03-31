@@ -54,7 +54,7 @@ function Clubs() {
                 loading || searchLoading
                     ? <Loading />
                     : (!clubs?.length
-                        ? <div className='min-h-[50vh]'><NoData /></div>
+                        ? <div className='min-h-[42vh]'><NoData /></div>
                         : <main >
                             <div className='mt-[3rem] lg:hidden mb-5'>
                                 {

@@ -70,6 +70,7 @@ function Table() {
         <Loading />
       ) : (
         <InfiniteScroll
+          style={{minHeight:'42vh'}}
           dataLength={players?.length}
           next={fetchMoreData}
           hasMore={hasMore}

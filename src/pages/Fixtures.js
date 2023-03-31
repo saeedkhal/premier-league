@@ -16,7 +16,7 @@ function Fixtures() {
 
 
   return <main className='xl:w-[70%] m-auto'>
-    <Header title='' />
+    <Header title='Fixture' />
     {loading ? <Loading /> : fixture?.map((ResultItem) => {
       return <div key={ResultItem?.date}>
               <section className='m-3'>
