@@ -54,7 +54,7 @@ function MainNews() {
                             return <section key={index} className='mb-5 text-white grow'>
                                 <article className='flex gap-3 bg-primary-light items-center'>
                                     <div>
-                                        <img className='w-[230px] h-full object-cover' src={el?.img} alt='SI1' />
+                                        <img className='w-[230px] h-full object-cover max-h-[100px]' src={el?.img} alt='SI1' />
                                     </div>
                                     <div className='p-4'>
                                         <h1 className='font-xl text-neutral font-bold italic'>{el?.tag}</h1>

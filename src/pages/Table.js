@@ -29,10 +29,11 @@ function Table() {
             <div className='premierleage-img mt-6 mb-4 mx-auto' />
             {
                 loading ?
-                ( <Loading />) :
-                (
-
-                         
+              
+                    (<Loading />)
+              
+                 :
+                ( 
                   <table className='w-[95%] xl:w-[90%]  text-center text-clr-main mt-1 mx-auto mb-4 border border-black/5'>
                       <thead>
                           <tr className='bg-clr-main bg-opacity-10 xl:[&>*]:px-6 h-10 text-xs'>
@@ -192,7 +193,7 @@ function Table() {
       
                       </tbody>
                   </table> )}
-            <FooterSponsor />
+                  <FooterSponsor />
         </div>
     );
 }
