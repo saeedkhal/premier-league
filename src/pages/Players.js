@@ -6,6 +6,7 @@ import { fetchPlayer } from '../features/players/playersSlice';
 import Loading from '../components/shared-components/loading';
 import { IoIosSearch } from 'react-icons/io';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import playersData from '../assets/data/players'
 
 const step = 20;
 function Table() {
@@ -18,7 +19,7 @@ function Table() {
   const fetchMoreData = () => {
     setSize(players.length + step);
     setTimeout(() => {
-      const remainingPlayers = data?.players?.slice(
+      const remainingPlayers = playersData?.slice(
         players.length,
         players.length + step
       );
@@ -27,8 +28,10 @@ function Table() {
     }, [1000]);
   };
   const handelGetPlayesr = async () => {
-    const res = await dispatch(fetchPlayer());
-    setPlayers(res?.payload?.players.slice(0, step));
+    // const res = await dispatch(fetchPlayer());
+    // setPlayers(res?.payload?.players.slice(0, step));
+    setPlayers(playersData.slice(0, step));
+    
   };
 
   const handelSearch = (e) => {
