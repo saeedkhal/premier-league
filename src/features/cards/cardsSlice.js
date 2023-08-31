@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export const fetchCards = createAsyncThunk('feachcards', async() =>{
-    const res = await axios.get('/api/featured-cards');
+    const res = await axios.get('/api/feature-cards.json');
     return res.data
 })
 

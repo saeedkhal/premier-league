@@ -9,7 +9,7 @@ export const fetchTable = createAsyncThunk('fetchTable', async () => {
 
 const initialState = {
     loading: false,
-    data: {},
+    data: [],
     error: ''
 }
 const tableSlice = createSlice({

@@ -13,7 +13,7 @@ function Featured() {
 
         <>
             {
-                data?.cards?.map((card, i) => {
+                data?.map((card, i) => {
                     return <main key={i} className='mt-10 shadow-[0_1px_4px_0_rgb(0,0,0,0.15)]'>
                         <h1 className='text-2xl font-bold p-3'>
                             {card?.statsTitle}
