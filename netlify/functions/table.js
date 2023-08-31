@@ -5,10 +5,10 @@ exports.handler = async () => {
   try {
 
 
-    const html = await request.get('https://www.premierleague.com/tables');
+    // const html = await request.get('https://www.premierleague.com/tables');
     // fs.writeFileSync('test.html', html)
 
-    // const html = fs.readFileSync('table.html')
+    const html = fs.readFileSync('table.html')
     const $ = cheerio.load(html);
 
     let table = [];
@@ -58,6 +58,8 @@ exports.handler = async () => {
       table.push({ position, movment, teamLink, teamAbb, teamName, teamImg, played, won, drawn, lost, goalFor, goalAgainst, goalDiffrence, points, formAbb, nextMatch });
 
     });
+    // fs.writeFileSync('public/api/table.json', JSON.stringify(table))
+
     return {
       statusCode: 200,
       body: JSON.stringify({ table }),

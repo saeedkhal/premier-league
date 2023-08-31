@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/shared-components/Header';
 import FooterSponsor from '../components/shared-components/FooterSponsor';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPlayer } from '../features/players/playersSlice';
+import { useSelector } from 'react-redux';
 import Loading from '../components/shared-components/loading';
 import { IoIosSearch } from 'react-icons/io';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -10,7 +9,6 @@ import playersData from '../assets/data/players'
 
 const step = 20;
 function Table() {
-  const dispatch = useDispatch();
   const [searchLoading, setSearchLoading] = useState(false);
   const { data, loading } = useSelector((state) => state?.players);
   const [players, setPlayers] = useState([]);

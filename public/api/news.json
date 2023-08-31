@@ -1,0 +1,302 @@
+{
+  "mainNews": {
+    "mainNewLink": "/news/3118067",
+    "mainNewImg": "https://resources.premierleague.com/photos/2023/03/22/2872af3c-8f59-4060-9e7b-7021afc13e0b/POTM-MARCH-2223-Editorial-Lead.png?width=500&height=380",
+    "tag": "Awards",
+    "title": "Pick your EA SPORTS Player of the Month",
+    "text": "Help decide who wins March's award out of Isak, Mac Allister, Mings, Saka, Salah and Trossard",
+    "related": [
+      {
+        "text": "Vote for March's Budweiser Goal of the Month",
+        "link": "/news/3118070",
+        "isVideo": false
+      },
+      {
+        "text": "Choose your Barclays Manager of the Month",
+        "link": "/news/3118069",
+        "isVideo": false
+      },
+      {
+        "text": "Select your Castrol Save of the Month",
+        "link": "/news/3118071",
+        "isVideo": false
+      }
+    ]
+  },
+  "secoundryNews": [
+    {
+      "link": "/news/3119583",
+      "img": "https://resources.premierleague.com/photos/2023/03/23/f7a1cc43-4ad9-4956-bcf7-312fc1daa68a/ePL-2022-23-DESKTOP2.png?width=860&height=573",
+      "isVideo": false,
+      "time": "",
+      "tag": "ePremier League",
+      "title": "Big clashes ahead in 2022/23 ePremier League finals"
+    },
+    {
+      "link": "/video/single/3018039",
+      "img": "https://resources.premierleague.com/photos/2023/01/13/e84613af-5586-4b6e-bb12-e1611446374e/Screenshot-2023-01-13-at-14.57.01.png?width=860&height=573",
+      "isVideo": true,
+      "time": "12:46",
+      "tag": "",
+      "title": "Harry Kane the record-breaker"
+    }
+  ],
+  "latestVideosmain": {
+    "link": "video/single/3119775",
+    "img": "https://resources.premierleague.com/photos/2023/03/23/7f017281-20cb-480d-aed0-b607e07e5149/hDooanvZ.jpg?width=100&height=51",
+    "runTime": "01:46",
+    "title": "FPL must-haves for the final 10 Gameweeks",
+    "text": "Find out which players The Scout deems essential over the run-in",
+    "published": "23/3/202323/3/202323/3/202323/3/2023"
+  },
+  "latestVideosSecoundary": [
+    {
+      "img": "https://resources.premierleague.com/photos/2023/03/22/4afa42ad-b636-4db9-bcdb-880a8b860a39/Screenshot-2023-03-22-at-16.46.22.png?width=100&height=58",
+      "runTime": "01:02",
+      "title": "Ten of the best goals of 2022/23",
+      "published": "23/3/2023"
+    },
+    {
+      "img": "https://resources.premierleague.com/photos/2023/03/22/0a4e5a94-a1ba-4f08-85da-84d3abff1df2/GOTM-MARCH-2223-Editorial-Lead.png?width=100&height=67",
+      "runTime": "01:28",
+      "title": "Watch the Budweiser Goal of the Month contenders",
+      "published": "23/3/2023"
+    },
+    {
+      "img": "https://resources.premierleague.com/photos/2023/03/21/739f5d86-e066-4865-8b61-b49ef3eb3705/Screenshot-2023-03-21-at-14.29.17.png?width=100&height=63",
+      "runTime": "03:03",
+      "title": "FPL team of the season so far",
+      "published": "23/3/2023"
+    },
+    {
+      "img": "https://resources.premierleague.com/photos/2023/03/22/0c2eb649-a1f9-4064-bdf5-4175d0e70b44/SOTM-MARCH-2223-Editorial-Lead.png?width=100&height=67",
+      "runTime": "01:20",
+      "title": "Castrol Save of the Month contenders",
+      "published": "23/3/2023"
+    }
+  ],
+  "latestNews": [
+    {
+      "header": "Premier League Awards",
+      "list": [
+        {
+          "link": "/news/3118071",
+          "img": "https://resources.premierleague.com/photos/2023/03/22/0c2eb649-a1f9-4064-bdf5-4175d0e70b44/SOTM-MARCH-2223-Editorial-Lead.png?width=100&height=67",
+          "tag": "Awards",
+          "title": "Select your Castrol Save of the Month",
+          "relatedArticles": [
+            {
+              "link": "/news/3118067",
+              "isVideo": false,
+              "text": "Pick your EA SPORTS Player of the Month"
+            },
+            {
+              "link": "/news/3118069",
+              "isVideo": false,
+              "text": "Choose your Barclays Manager of the Month"
+            }
+          ]
+        },
+        {
+          "link": "/news/3118070",
+          "img": "https://resources.premierleague.com/photos/2023/03/22/0a4e5a94-a1ba-4f08-85da-84d3abff1df2/GOTM-MARCH-2223-Editorial-Lead.png?width=100&height=67",
+          "tag": "Awards",
+          "title": "Vote for March's Budweiser Goal of the Month",
+          "relatedArticles": [
+            {
+              "link": "/news/3118067",
+              "isVideo": false,
+              "text": "Pick your EA SPORTS Player of the Month"
+            },
+            {
+              "link": "/news/3118069",
+              "isVideo": false,
+              "text": "Choose your Barclays Manager of the Month"
+            }
+          ]
+        },
+        {
+          "link": "/news/3118069",
+          "img": "https://resources.premierleague.com/photos/2023/03/22/abb16ba7-1e7b-4a60-b008-23db4d646568/MOTM-MARCH-2223-Editorial-Lead.png?width=100&height=67",
+          "tag": "Awards",
+          "title": "Choose your Barclays Manager of the Month",
+          "relatedArticles": [
+            {
+              "link": "/news/3118067",
+              "isVideo": false,
+              "text": "Pick your EA SPORTS Player of the Month"
+            },
+            {
+              "link": "/news/3118070",
+              "isVideo": false,
+              "text": "Vote for March's Budweiser Goal of the Month"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Latest News",
+      "list": [
+        {
+          "link": "/news/3116822",
+          "img": "https://resources.premierleague.com/photos/2023/01/21/7be9359b-ec5b-4601-9d9f-7e39fcae95c4/GettyImages-1458229220.jpg?width=100&height=67",
+          "tag": "Non-League Day",
+          "title": "Bowen: Hereford got me ready for life in Premier League",
+          "relatedArticles": [
+            {
+              "link": "/news/3113278",
+              "isVideo": false,
+              "text": "Pinnock: Every match in non-league meant something"
+            },
+            {
+              "link": "/video/single/3117689",
+              "isVideo": true,
+              "text": "Non-league to Premier League XI"
+            }
+          ]
+        },
+        {
+          "link": "/news/3119582",
+          "img": "https://resources.premierleague.com/photos/2023/03/23/005eded5-4e42-47ad-9b29-deb31e89ee44/Kane-Rice.jpg?width=100&height=67",
+          "tag": "News",
+          "title": "Spurs and West Ham to meet in Australia in July",
+          "relatedArticles": [
+            {
+              "link": "https://www.tottenhamhotspur.com/news/2023/march/tottenham-hotspur-to-face-london-rivals-in-perth-to-kick-off-asia-pacific-tour-2023/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+              "isVideo": false,
+              "text": "Tottenham Hotspur to face London rivals in Perth to kick off Asia-Pacific Tour 2023\n\t\t\t\tExternal Link",
+              "imgIcon": "https://resources.premierleague.com/premierleague/badges/25/t6.png"
+            },
+            {
+              "link": "https://www.whufc.com/news/west-ham-united-embark-pre-season-tour-australia?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+              "isVideo": false,
+              "text": "West Ham United to embark on pre-season tour of Australia\n\t\t\t\tExternal Link",
+              "imgIcon": "https://resources.premierleague.com/premierleague/badges/25/t21.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Latest FPL News",
+      "list": [
+        {
+          "link": "/news/1820580",
+          "img": "https://resources.premierleague.com/photos/2022/09/22/8094ac4a-2ce4-444b-92c4-97fcd730f82f/0dc4690e-0857-478c-8904-3182ef811fe0.png?width=100&height=67",
+          "tag": "Fantasy Premier League",
+          "title": "The FPL Pod: Reviewing the season so far",
+          "relatedArticles": [
+            {
+              "link": "/news/3118968",
+              "isVideo": false,
+              "text": "Is it time to sell Arsenal stars in FPL?"
+            },
+            {
+              "link": "/news/3117684",
+              "isVideo": false,
+              "text": "How Fantasy managers can plan for Blank Gameweek 32"
+            }
+          ]
+        },
+        {
+          "link": "/news/3119694",
+          "img": "https://resources.premierleague.com/photos/2023/03/23/e2285ba5-f649-4740-a85a-b4926fd61c72/Gabriel-Saka-Arsenal.jpg?width=100&height=72",
+          "tag": "Fantasy Premier League",
+          "title": "FPL experts: What to do with Arsenal players",
+          "relatedArticles": [
+            {
+              "link": "/news/3118968",
+              "isVideo": false,
+              "text": "Is it time to sell Arsenal stars in FPL?"
+            },
+            {
+              "link": "/news/3117768",
+              "isVideo": false,
+              "text": "FPL experts: What's the best chip strategy?"
+            }
+          ]
+        },
+        {
+          "link": "/news/3118968",
+          "img": "https://resources.premierleague.com/photos/2023/03/22/080fceb2-5ce4-48c9-9035-d3d1df266854/ARSENAL-FANTASY-LEAD.jpg?width=100&height=67",
+          "tag": "Fantasy Premier League",
+          "title": "Is it time to sell Arsenal stars in FPL?",
+          "relatedArticles": [
+            {
+              "link": "/news/3090425",
+              "isVideo": false,
+              "text": "Which teams have Blank or Double Gameweeks in FPL?"
+            },
+            {
+              "link": "/news/3117684",
+              "isVideo": false,
+              "text": "How Fantasy managers can plan for Blank Gameweek 32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Club News",
+      "list": [
+        {
+          "link": "https://www.manutd.com/en/news/detail/wayne-rooney-reacts-to-harry-kane-breaking-england-goalscoring-record?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t1.png",
+          "tag": "Club News",
+          "title": "Rooney reacts to Kane's record-breaking goalExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.lcfc.com/news/3119726/daka-amartey-secure-afcon-qualification-wins?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t13.png",
+          "tag": "Club News",
+          "title": "Daka & Amartey Secure AFCON Qualification WinsExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.chelseafc.com/en/news/article/internationals-blues-england-trio-and-joao-felix-taste-winning-start-to?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t8.png",
+          "tag": "Club News",
+          "title": "Internationals Blues: England trio and Joao Felix taste winning start to qualifiersExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.brentfordfc.com/en/news/article/brentford-b-team-neil-macfarlane-on-amazing-occasion-against-ukraine?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t94.png",
+          "tag": "Club News",
+          "title": "Neil MacFarlane on 'amazing occasion' against UkraineExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.brentfordfc.com/en/news/article/brentford-b-team-ryan-trevitt-on-ukraine-test?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t94.png",
+          "tag": "Club News",
+          "title": "Ryan Trevitt on Ukraine testExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.brentfordfc.com/en/news/article/brentford-b-teambrentford-b-0-ukraine-2-ukraine-national-team?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t94.png",
+          "tag": "Club News",
+          "title": "Brentford B 0 Ukraine 2External Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.southamptonfc.com/2023/03/23/international-report-kamaldeen-sulemana-ghana-angola-southampton-2023?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t20.png",
+          "tag": "Club News",
+          "title": "Sulemana helps Ghana to dramatic victoryExternal Link",
+          "relatedArticles": []
+        },
+        {
+          "link": "https://www.evertonfc.com/news/3120009/watch-blues-train-ahead-of-historic-goodison-derby?utm_source=premier-league-website&utm_campaign=website&utm_medium=link",
+          "img": "/resources/prod/v6.115.1-5099/i/default-thumbnails/sm/t11.png",
+          "tag": "Club News",
+          "title": "WATCH: Blues Train Ahead Of Historic Goodison DerbyExternal Link",
+          "relatedArticles": []
+        }
+      ]
+    }
+  ]
+}

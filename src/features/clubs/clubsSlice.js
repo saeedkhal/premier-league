@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 export const getClubs = createAsyncThunk('getclubs', async () => {
-    const res = await axios.get('/api/clubs');
+    const res = await axios.get('/api/clubs.json');
     return res.data
 });
 

@@ -1,0 +1,121 @@
+[
+    {
+      "clubLink": "/clubs/1/Arsenal/overview",
+      "studiumClass": "club-card--t3",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t3.svg",
+      "clubName": "Arsenal",
+      "stadiumName": "Emirates Stadium"
+    },
+    {
+      "clubLink": "/clubs/127/Bournemouth/overview",
+      "studiumClass": "club-card--t91",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t91.svg",
+      "clubName": "Bournemouth",
+      "stadiumName": "Vitality Stadium"
+    },
+    {
+      "clubLink": "/clubs/130/Brentford/overview",
+      "studiumClass": "club-card--t94",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t94.svg",
+      "clubName": "Brentford",
+      "stadiumName": "Brentford Community Stadium"
+    },
+    {
+      "clubLink": "/clubs/131/Brighton-and-Hove-Albion/overview",
+      "studiumClass": "club-card--t36",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t36.svg",
+      "clubName": "Brighton & Hove Albion",
+      "stadiumName": "Amex Stadium"
+    },
+    {
+      "clubLink": "/clubs/43/Burnley/overview",
+      "studiumClass": "club-card--t90",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t90.svg",
+      "clubName": "Burnley",
+      "stadiumName": "Turf Moor"
+    },
+    {
+      "clubLink": "/clubs/4/Chelsea/overview",
+      "studiumClass": "club-card--t8",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t8.svg",
+      "clubName": "Chelsea",
+      "stadiumName": "Stamford Bridge"
+    },
+    {
+      "clubLink": "/clubs/6/Crystal-Palace/overview",
+      "studiumClass": "club-card--t31",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t31.svg",
+      "clubName": "Crystal Palace",
+      "stadiumName": "Selhurst Park"
+    },
+    {
+      "clubLink": "/clubs/7/Everton/overview",
+      "studiumClass": "club-card--t11",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t11.svg",
+      "clubName": "Everton",
+      "stadiumName": "Goodison Park"
+    },
+    {
+      "clubLink": "/clubs/34/Fulham/overview",
+      "studiumClass": "club-card--t54",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t54.svg",
+      "clubName": "Fulham",
+      "stadiumName": "Craven Cottage"
+    },
+    {
+      "clubLink": "/clubs/10/Liverpool/overview",
+      "studiumClass": "club-card--t14",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t14.svg",
+      "clubName": "Liverpool",
+      "stadiumName": "Anfield"
+    },
+    {
+      "clubLink": "/clubs/163/Luton-Town/overview",
+      "studiumClass": "club-card--t102",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t102.svg",
+      "clubName": "Luton Town",
+      "stadiumName": "Kenilworth Road"
+    },
+    {
+      "clubLink": "/clubs/11/Manchester-City/overview",
+      "studiumClass": "club-card--t43",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t43.svg",
+      "clubName": "Manchester City",
+      "stadiumName": "Etihad Stadium"
+    },
+    {
+      "clubLink": "/clubs/12/Manchester-United/overview",
+      "studiumClass": "club-card--t1",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t1.png",
+      "clubName": "Manchester United",
+      "stadiumName": "Old Trafford"
+    },
+    {
+      "clubLink": "/clubs/23/Newcastle-United/overview",
+      "studiumClass": "club-card--t4",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t4.png",
+      "clubName": "Newcastle United",
+      "stadiumName": "St. James' Park"
+    },
+    {
+      "clubLink": "/clubs/15/Nottingham-Forest/overview",
+      "studiumClass": "club-card--t17",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t17.svg",
+      "clubName": "Nottingham Forest",
+      "stadiumName": "The City Ground"
+    },
+    {
+      "clubLink": "/clubs/18/Sheffield-United/overview",
+      "studiumClass": "club-card--t49",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t49.svg",
+      "clubName": "Sheffield United",
+      "stadiumName": "Bramall Lane"
+    },
+    {
+      "clubLink": "/clubs/21/Tottenham-Hotspur/overview",
+      "studiumClass": "club-card--t6",
+      "clubImg": "https://resources.premierleague.com/premierleague/badges/rb/t6.svg",
+      "clubName": "Tottenham Hotspur",
+      "stadiumName": "Tottenham Hotspur Stadium"
+    }
+]  

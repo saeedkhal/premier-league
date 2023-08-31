@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchTable = createAsyncThunk('fetchTable', async () => {
-    const res = await axios.get('/api/table');
+    const res = await axios.get('/api/table.json');
     return res.data
 })
 

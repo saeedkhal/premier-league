@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchNews = createAsyncThunk('fetchNews', async () => {
-    const res = await axios.get('/api/news');
+    const res = await axios.get('/api/news.json');
     return res.data
 })
 

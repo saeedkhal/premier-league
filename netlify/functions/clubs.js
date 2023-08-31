@@ -17,7 +17,9 @@ exports.handler = async () => {
             stadiumName: $(club).find('a .clubColourBg .stadiumName').text().trim(),
             smallClubImg: $(club).find('a .clubColourBg img.badge-image').attr('src'),
         }
-    }).get()
+    }).get();
+
+    // fs.writeFileSync('public/api/clubs.json', JSON.stringify(clubs))
     try {
         return {
             statusCode: 200,

@@ -19,7 +19,7 @@ function Table() {
     }
 
     const { data, loading} = useSelector(state => state?.table);
-
+    
     useEffect(() => {
         dispatch(fetchTable())
     }, []);
@@ -81,7 +81,7 @@ function Table() {
                       </thead>
                       <tbody className='font-light text-black text-sm'>
                           {
-                              data?.table?.map((club, i) => {
+                              data?.map((club, i) => {
                                   return <tr key={i} className='border-b font-light h-10 relative border-b-black/[.1] [&>*]:font-light'>
                                       <td className='font-light flex items-center justify-center gap-2 h-10'>
                                           <span className='w-4'>

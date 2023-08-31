@@ -27,7 +27,8 @@ function Clubs() {
     const dispatch = useDispatch();
     const handelGetClubs = async () => {
         const res = await dispatch(getClubs());
-        setClubs(res?.payload?.clubs)
+        console.log(res)
+        setClubs(res?.payload)
     }
     useEffect(() => {
         handelGetClubs()
@@ -85,7 +86,7 @@ function Clubs() {
                                                 <article style={bg(i)} className='text-white group text-center bg-no-repeat bg-cover'>
                                                     <section className='h-[8rem] relative'>
                                                         <div className='rounded-full bg-white inline-block p-3 top-[50%] left-1/2 absolute translate-x-[-50%] translate-y-[-15%] '>
-                                                            <img src={club?.clubImg} alt='img' />
+                                                            <img className='max-w-[80px] rounded-full' src={club?.clubImg} alt='img' />
                                                         </div>
                                                     </section>
                                                     <section className='bg-primary h-[9rem]'>

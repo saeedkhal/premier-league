@@ -3,14 +3,14 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 exports.handler = async () => {
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto('https://www.premierleague.com/home');
-    await page.waitForFunction('window.performance.timing.domContentLoadedEventEnd > 0');
-    await page.waitForSelector('.day')
-    const html = await page.content();
-    fs.writeFileSync('events.html', html);
-    // const html = fs.readFileSync('events.html');
+    // const browser = await puppeteer.launch();
+    // const page = await browser.newPage();
+    // await page.goto('https://www.premierleague.com/home');
+    // await page.waitForFunction('window.performance.timing.domContentLoadedEventEnd > 0');
+    // await page.waitForSelector('.day')
+    // const html = await page.content();
+    // fs.writeFileSync('events.html', html);
+    const html = fs.readFileSync('events.html');
 
     const $ = cheerio.load(html);
     const getData = (element) => {
@@ -53,6 +53,9 @@ exports.handler = async () => {
 
 
     const week = $('.fixturesAbridgedHeader header .week').first().text().trim();
+
+      // fs.writeFileSync('public/api/events.json', JSON.stringify(week))
+
     return {
       statusCode: 200,
       body: JSON.stringify({

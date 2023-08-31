@@ -33,6 +33,9 @@ exports.handler = async () => {
                 }).get()
             };
         }).get();
+
+                fs.writeFileSync('public/api/fixture.json', JSON.stringify(fixture))
+
         return {
             statusCode: 200,
             body: JSON.stringify({ fixture }),

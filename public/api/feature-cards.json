@@ -1,0 +1,50 @@
+[
+  {
+    "statsTitle": "Featured Player",
+    "statName": "Riyad Mahrez",
+    "playerOrLink": "/players/8983/Riyad-Mahrez/overview",
+    "position": "Forward",
+    "flagClass": "flag DZ",
+    "playerCountry": "Algeria",
+    "missingImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/Photo-Missing.png",
+    "playerImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/p103025.png",
+    "statsList": [
+      { "key": "Appearances", "value": "273" },
+      { "key": "Goals", "value": "82" },
+      { "key": "Assists", "value": "55" },
+      { "key": "Shots", "value": "573" }
+    ]
+  },
+  {
+    "statsTitle": "Featured Player",
+    "statName": "Séamus Coleman",
+    "playerOrLink": "/players/3600/Séamus-Coleman/overview",
+    "position": "Defender",
+    "flagClass": "flag IE",
+    "playerCountry": "Ireland",
+    "missingImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/Photo-Missing.png",
+    "playerImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/p59949.png",
+    "statsList": [
+      { "key": "Appearances", "value": "348" },
+      { "key": "Goals", "value": "22" },
+      { "key": "Assists", "value": "24" },
+      { "key": "Clean sheets", "value": "93" }
+    ]
+  },
+  {
+    "statsTitle": "Featured Player",
+    "statName": "Marcus Tavernier",
+    "playerOrLink": "/players/14846/Marcus-Tavernier/overview",
+    "position": "Midfielder",
+    "flagClass": "flag GB-ENG",
+    "playerCountry": "England",
+    "missingImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/Photo-Missing.png",
+    "playerImg": "https://resources.premierleague.com/premierleague/photos/players/110x140/p201658.png",
+    "statsList": [
+      { "key": "Appearances", "value": "17" },
+      { "key": "Goals", "value": "3" },
+      { "key": "Assists", "value": "4" },
+      { "key": "Big Chances Created", "value": "3" }
+    ]
+  }
+]

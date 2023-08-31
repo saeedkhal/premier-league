@@ -4,10 +4,10 @@ const fs = require('fs');
 exports.handler = async () => {
   try {
 
-    const html = await request.get('https://www.premierleague.com/tables');
+    // const html = await request.get('https://www.premierleague.com/tables');
     // fs.writeFileSync('test.html', html)
 
-    // const html = fs.readFileSync('test.html')
+    const html = fs.readFileSync('test.html')
 
     const $ = cheerio.load(html);
 
@@ -19,6 +19,8 @@ exports.handler = async () => {
       };
 
     }).get();
+
+      // fs.writeFileSync('public/api/sopnsors.json', JSON.stringify(sopnsors))
     return {
       statusCode: 200,
       body: JSON.stringify({ res: sopnsors }),
