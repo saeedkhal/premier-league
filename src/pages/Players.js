@@ -10,12 +10,10 @@ import playersData from '../assets/data/players'
 const step = 20;
 function Table() {
   const [searchLoading, setSearchLoading] = useState(false);
-  const { data, loading } = useSelector((state) => state?.players);
+  const {  loading } = useSelector((state) => state?.players);
   const [players, setPlayers] = useState([]);
-  const [size, setSize] = useState(players.length);
   const [hasMore, setHasMore] = useState(true);
   const fetchMoreData = () => {
-    setSize(players.length + step);
     setTimeout(() => {
       const remainingPlayers = playersData?.slice(
         players.length,
@@ -28,7 +26,7 @@ function Table() {
   const handelGetPlayesr = async () => {
     // const res = await dispatch(fetchPlayer());
     // setPlayers(res?.payload?.players.slice(0, step));
-    setPlayers(playersData.slice(0, step));
+    setPlayers(playersData?.slice(0, step));
     
   };
 
@@ -36,12 +34,12 @@ function Table() {
     setSearchLoading(true);
     const searchValue = e.target.value.trim().toLowerCase();
     if (!searchValue) {
-      setPlayers(data?.players.slice(0, size));
+      setPlayers(playersData?.slice(0, step));
       setHasMore(true);
     } else {
       setHasMore(false);
       setPlayers(() => {
-        return data?.players?.filter((player) =>
+        return playersData?.filter((player) =>
           player?.name?.toLowerCase().startsWith(searchValue)
         );
       });
