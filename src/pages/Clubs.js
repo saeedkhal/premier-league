@@ -9,16 +9,16 @@ import NoData from '../components/shared-components/NoData';
 import Header from '../components/shared-components/Header';
 function Clubs() {
     const { data, loading } = useSelector(state => state?.clubs)
-    const [clubs, setClubs] = useState(data?.clubs || []);
+    const [clubs, setClubs] = useState(data || []);
     const [searchLoading, setSearchLoading] = useState(false);
     const handelSearch = (e) => {
         setSearchLoading(true);
         const searchValue = e.target.value.trim().toLowerCase()
         if (!searchValue) {
-            setClubs(data.clubs)
+            setClubs(data)
         } else {
             setClubs(() => {
-                return data?.clubs?.filter(club => club?.clubName.toLowerCase().startsWith(searchValue))
+                return data?.filter(club => club?.clubName.toLowerCase().startsWith(searchValue))
             })
         }
         setSearchLoading(false);
@@ -27,7 +27,6 @@ function Clubs() {
     const dispatch = useDispatch();
     const handelGetClubs = async () => {
         const res = await dispatch(getClubs());
-        console.log(res)
         setClubs(res?.payload)
     }
     useEffect(() => {
